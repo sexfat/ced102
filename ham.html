@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +8,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
     <title>選單設計二</title>
 </head>
+
 <body>
     <div id="nav">
         <div class="bar top"></div>
@@ -17,7 +19,7 @@
     <script>
         //動畫
         var tlmenu = new TimelineMax();
-    
+
         // tlmenu.to('.top' , .3 , {
         //     width :'55px'
         // }).to('.middle' , .3 ,{
@@ -25,34 +27,36 @@
         // }).to('.bottom' , .3 , {
         //     width : '30px'
         // })
-     var top_mv = TweenMax.to('.top' , .2 , {
-           y: '11px',
-           rotation : 45, 
-        }) 
-     var  bottom_mv  = TweenMax.to('.bottom' , .2 , {
-           y: '-11px',
-           rotation : -45, 
-        }) 
-     var middle_mv = TweenMax.to('.middle' , .2 , {
-            opacity : 0
-        }) 
-    tlmenu.stop();
-    
-    tlmenu.add([top_mv,bottom_mv,middle_mv]);      
+        var top_mv = TweenMax.to('.top', .2, {
+            y: '11px',
+            rotation: 45,
+        })
+        var bottom_mv = TweenMax.to('.bottom', .2, {
+            y: '-11px',
+            rotation: -45,
+        })
+        var middle_mv = TweenMax.to('.middle', .2, {
+            opacity: 0,
+            x: '200%'
+        })
+        tlmenu.stop();
+
+        tlmenu.add([top_mv, bottom_mv, middle_mv]);
         //動畫stop
-        
-        
+
+
         //事件被觸發
-        document.getElementById('nav').onmouseover = function(){
+        document.getElementById('nav').onmouseover = function () {
             tlmenu.play();
-        } 
-        document.getElementById('nav').onmouseleave = function(){
+        }
+        document.getElementById('nav').onmouseleave = function () {
             tlmenu.reverse();
-        } 
+        }
 
 
 
 
     </script>
 </body>
+
 </html>
