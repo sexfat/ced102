@@ -1,14 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
-    <title>TweenMax 動畫基本</title>
+    <title>動畫</title>
 </head>
+
 <body>
-    <div class="box"></div>
-    
+    <div class="box basic">001</div>
+    <div class="box from">002</div>
+
 </body>
+<script>
+
+    TweenMax.to('.basic', 2, {
+        //  x: 300,
+        //  y: 100,
+        rotation: 180, //旋轉
+        transformOrigin: 'right bottom',  //定位點
+        scale: 2, //放大
+        delay: 1, //延遲
+        opacity: 0,
+        //  autoAlpha : 0,
+        //  ease: Elastic.easeOut.config(1, 0.3)
+    });
+
+    TweenMax.from('.from', 2, {
+        x: 100,
+        opacity: 0,
+        repeat : 2, //重複
+        yoyo :  true //跟repeat 搭配使用
+    })
+    
+
+
+
+</script>
+
 </html>

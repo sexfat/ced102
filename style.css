@@ -12,3 +12,13 @@ body{
     box-sizing: border-box;
     background-color: rgb(0, 255, 170);
   }
+
+ .basic {
+     position: relative;
+     top: 100px
+ } 
+
+ .from {
+     position: relative;
+     top : 100px;
+ }
