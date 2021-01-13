@@ -17,6 +17,10 @@
     <div class="box staggerTo">0041</div>
     <div class="box staggerTo">0042</div>
     <div class="box staggerTo">0043</div>
+    <div class="box mv0">mv00</div>
+    <div class="box mv01">mv01</div>
+    <div class="box mv02">mv02</div>
+    <div class="box mv03">mv03</div>
 
 </body>
 <script>
@@ -48,13 +52,40 @@
         opacity: 1,
         backgroundColor: '#f20', //背景顏色
         boxShadow: '10px 10px 20px #f27', //陰影
-        className : '+=aaaa' //動態加class
+        className: '+=aaaa' //動態加class
     })
-     TweenMax.staggerFrom('.staggerTo' , 1 , {
-          x: -100,
-          opacity : 0,
-          ease: Power3.easeInOut
-        }, .6)
+    TweenMax.staggerFrom('.staggerTo', 1, {
+        x: -100,
+        opacity: 0,
+        ease: Power3.easeInOut
+    }, .6)
+
+    var tl = new TimelineMax({
+        repeat : -1,
+        repeatDelay : 1
+    });
+
+    tl.to('.mv01', 1, {
+        x: 100
+    }).from('.mv02', 1, {
+        x: 200
+    }).to('.mv03', 1, {
+        x: 300,
+        rotation : 360
+    });
+
+    var tl0 =  new TimelineMax()
+ 
+
+    tl0.to('.mv0' , 1 , { x: 100}).to('.mv0' , 1 , {y: 100}).to('.mv0' , 1 , {
+         x: 400
+    }).to('.mv0' , 1 , {
+        y: 200
+    })
+
+
+
+
 
 
 
