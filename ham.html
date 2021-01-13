@@ -14,6 +14,28 @@
         <div class="bar bottom"></div>
     </div>
 
+    <script>
+        var tlmenu = new TimelineMax();
     
+        tlmenu.to('.top' , .3 , {
+            width :'55px'
+        }).to('.middle' , .3 ,{
+            width : '65px'
+        }).to('.bottom' , .3 , {
+            width : '30px'
+        })
+   
+        tlmenu.stop();
+        document.getElementById('nav').onmouseover = function(){
+            tlmenu.play();
+        } 
+        document.getElementById('nav').onmouseleave = function(){
+            tlmenu.reverse();
+        } 
+
+
+
+
+    </script>
 </body>
 </html>
