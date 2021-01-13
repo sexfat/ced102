@@ -61,8 +61,8 @@
     }, .6)
 
     var tl = new TimelineMax({
-        repeat : -1,
-        repeatDelay : 1
+        repeat: -1,
+        repeatDelay: 1
     });
 
     tl.to('.mv01', 1, {
@@ -71,17 +71,26 @@
         x: 200
     }).to('.mv03', 1, {
         x: 300,
-        rotation : 360
+        rotation: 360
     });
 
-    var tl0 =  new TimelineMax()
- 
+    var tl0 = new TimelineMax({
+        onComplete: alerts //callback function
+    })
 
-    tl0.to('.mv0' , 1 , { x: 100}).to('.mv0' , 1 , {y: 100}).to('.mv0' , 1 , {
-         x: 400
-    }).to('.mv0' , 1 , {
+    function alerts() {
+
+        alert('完成動畫');
+    }
+
+
+    tl0.to('.mv0', 1, { x: 100 }).to('.mv0', 1, { y: 100 }).to('.mv0', 1, {
+        x: 400
+    }).to('.mv0', 1, {
         y: 200
     })
+
+
 
 
 
