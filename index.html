@@ -18,6 +18,7 @@
     <div class="box staggerTo">0042</div>
     <div class="box staggerTo">0043</div>
     <div class="box mv0">mv00</div>
+    <div class="box mv">mv</div>
     <div class="box mv01">mv01</div>
     <div class="box mv02">mv02</div>
     <div class="box mv03">mv03</div>
@@ -79,10 +80,13 @@
     })
 
     function alerts() {
-
-        alert('完成動畫');
+        // alert('完成動畫');
+        TweenMax.to('.mv' , 1 , {
+           rotation : 360,
+           repeat : -1,
+           ease: Power0.easeNone
+         })
     }
-
 
     tl0.to('.mv0', 1, { x: 100 }).to('.mv0', 1, { y: 100 }).to('.mv0', 1, {
         x: 400
