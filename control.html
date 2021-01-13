@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,8 +8,53 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
     <title>control 動畫</title>
 </head>
+
 <body>
     <button id="play">play</button>
-    <div class="box"></div>
+    <button id="pause">pause</button>
+    <button id="reverse">reverse</button>
+    <button id="fast">fast</button>
+    <button id="normal">normal</button>
+    <button id="slow">slow</button>
+    <div class="box mv"></div>
 </body>
+<script>
+
+    var playBtn = document.getElementById('play');
+    var pauseBtn = document.getElementById('pause');
+    var reverseBtn = document.getElementById('reverse');
+    var fastBtn =document.getElementById('fast');
+    var normalBtn =document.getElementById('normal');
+    var slowBtn =document.getElementById('slow');
+   
+    var tween = TweenMax.to('.mv', 8, { x: 800 , repeat : -1 })
+    // 播放
+    playBtn.addEventListener('click', function () {
+        tween.play();
+    })
+    //暫停
+    pauseBtn.addEventListener('click', function () {
+        tween.pause();
+    })
+// 反轉
+    reverseBtn.addEventListener('click', function () {
+        tween.reverse();
+    })
+    
+    
+    //加速
+    fastBtn.addEventListener('click', function () {
+        tween.timeScale(2);
+    })
+    //恢復正常速度
+    normalBtn.addEventListener('click', function () {
+        tween.timeScale(1);
+    })
+    slowBtn.addEventListener('click', function () {
+        tween.timeScale(0.5);
+    })
+
+
+</script>
+
 </html>
