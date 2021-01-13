@@ -13,10 +13,13 @@
     <div class="box basic">001</div>
     <div class="box from">002</div>
     <div class="box fromTo">003</div>
+    <div class="box staggerTo">004</div>
+    <div class="box staggerTo">004</div>
+    <div class="box staggerTo">004</div>
+    <div class="box staggerTo">004</div>
 
 </body>
 <script>
-
     TweenMax.to('.basic', 2, {
         //  x: 300,
         //  y: 100,
@@ -24,8 +27,9 @@
         transformOrigin: 'right bottom',  //定位點
         scale: 2, //放大
         delay: 1, //延遲
-        opacity: 0,
+        // opacity: 0,
         //  autoAlpha : 0,
+        // display : 'none'
         //  ease: Elastic.easeOut.config(1, 0.3)
     });
 
@@ -37,12 +41,20 @@
         ease: Power3.easeInOut
     })
     TweenMax.fromTo('.fromTo', 1, {
-         x: 400,
-         opacity : 0
-        },{
-         x: 100,
-         opacity: 1
-        })
+        x: 400,
+        opacity: 0
+    }, {
+        x: 100,
+        opacity: 1,
+        backgroundColor: '#f20', //背景顏色
+        boxShadow: '10px 10px 20px #f27', //陰影
+        className : '+=aaaa' //動態加class
+    })
+     TweenMax.staggerFrom('.staggerTo' , 1 , {
+          x: -100,
+          opacity : 0,
+          ease: Power3.easeInOut
+        }, .6)
 
 
 

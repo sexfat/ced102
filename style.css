@@ -14,16 +14,16 @@ body{
   }
 
  .basic {
-     position: relative;
-     top: 100px
+    
  } 
 
  .from {
-     position: relative;
-     top : 100px;
+  
  }
 
  .fromTo {
-    position: relative;
-    top : 100px;
+ 
+}
+.staggerTo {
+   margin-top: 10px;
 }
