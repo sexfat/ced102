@@ -10,6 +10,7 @@
 </head>
 
 <body>
+    <button id="btn">按鈕</button>
     <div class="wrapper">
         <nav>
             <ul class="top">
@@ -36,7 +37,28 @@
             </ul>
         </nav>
     </div>
+    <script>
 
+      
+      document.getElementById('btn').addEventListener('click' , function(){
+        TweenMax.staggerFrom('.top li' , 1 , {
+         y : -100
+        }, .3);
+      })
+
+
+     
+
+     TweenMax.staggerFrom('.left li' , 1 , {
+         x : -100
+     } , .3);
+
+     TweenMax.staggerFrom('.right li' , 1 , {
+         x : 100
+     } , .3);
+
+
+    </script>
 
 
 </body>
