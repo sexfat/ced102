@@ -45,6 +45,16 @@
     <section class="section05"></section>
     <div id="trigger05"></div>
     <section class="section06 even"></section>
-</body>
+    <script>
+        //設定全域場景
+        var controller = new ScrollMagic.Controller();
 
+        var tm = TweenMax.to('.mv01' , 1 , {x: 200});
+        //第一個觸發事件
+        new ScrollMagic.Scene({
+          triggerElement : 'trigger01' 
+        }).setTween(tm).addTo(controller);
+
+    </script>
+</body>
 </html>
