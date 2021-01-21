@@ -88,12 +88,14 @@
             .addIndicators().addTo(controller);
 
 
-        //觸發 function
 
+        //觸發 function
         new ScrollMagic.Scene({
             triggerElement: '#trigger04',
         }).on('enter' , function(){
-             console.log('enter進入');
+             console.log('enter 進入');
+        }).on('leave' , function(){
+            console.log('leave 離開');
         })
         .addIndicators().addTo(controller);
     </script>
