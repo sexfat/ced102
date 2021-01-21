@@ -59,6 +59,7 @@ table {
 body {
   background-color: #292929;
   color: #fff;
+  overflow-x: hidden;
 }
 
 body section {

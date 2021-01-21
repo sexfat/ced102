@@ -29,6 +29,7 @@
       
         <div class="box mv01"></div>
     </section>
+   
     <section class="section03">
         <div id="trigger02"></div>
         <div class="box mv02"></div>
@@ -49,11 +50,16 @@
         //設定全域場景
         var controller = new ScrollMagic.Controller();
 
-        var tm = TweenMax.to('.mv01' , 1 , {x: 200});
+        // var tm = TweenMax.to('.mv01' , 1 , {x: 400});
+        var tlm = new TimelineMax();
+        tlm.to('.mv01' , 1 , {x: 100}).to('.mv01' , 1, {y: 200}).to('.mv01', 1, {rotation : 360})
         //第一個觸發事件
         new ScrollMagic.Scene({
-          triggerElement : 'trigger01' 
-        }).setTween(tm).addTo(controller);
+          triggerElement : '#trigger01',
+          offset: 0,//觸發點位址 改綠指標(單位px)
+          triggerHook : 0.5, //瀏覽器指標位址 改藍色指標  0~1
+          duration: '100%'  //單位是px or %  動畫執行的範圍
+        }).setTween(tlm).addIndicators().addTo(controller);
 
     </script>
 </body>
