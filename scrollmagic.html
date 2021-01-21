@@ -26,7 +26,7 @@
     <div id="trigger01"></div>
     <!-- 觸發點 不能給樣式跟內容 -->
     <section class="section02 even">
-      
+
         <div class="box mv01"></div>
     </section>
     <div id="trigger02"></div>
@@ -39,7 +39,7 @@
         <div class="text area2"></div>
         <div class="text area3"></div>
         <div class="text area4"></div>
-        
+
     </section>
     <div id="trigger04"></div>
     <section class="section05"></section>
@@ -53,25 +53,41 @@
 
         //timelinemax 動畫
         var tlm = new TimelineMax();
-        tlm.to('.mv01' , 1 , {x: 100}).to('.mv01' , 1, {y: 200}).to('.mv01', 1, {rotation : 360})
-        
+        tlm.to('.mv01', 1, { x: 100 }).to('.mv01', 1, { y: 200 }).to('.mv01', 1, { rotation: 360 })
+
         //第一個觸發事件
         new ScrollMagic.Scene({
-          triggerElement : '#trigger01',
-          offset: 0,//觸發點位址 改綠指標(單位px)
-          triggerHook : 0.5, //瀏覽器指標位址 改藍色指標  0~1 
-          duration: '100%',  //單位是px or %  動畫執行的範圍
-          reverse : false // 預設true 動畫是否反覆
+            triggerElement: '#trigger01',
+            offset: 0,//觸發點位址 改綠指標(單位px)
+            triggerHook: 0.5, //瀏覽器指標位址 改藍色指標  0~1 
+            duration: '100%',  //單位是px or %  動畫執行的範圍
+            reverse: false // 預設true 動畫是否反覆
         }).setTween(tlm).addIndicators().addTo(controller);
 
         //class事件
-        var tm02 = TweenMax.to('.mv02' , 1 , {x: 400 , y: 200});
-        
+        var tm02 = TweenMax.to('.mv02', 1, { x: 400, y: 200 });
+
         new ScrollMagic.Scene({
-            triggerElement : '#trigger02',
-        }).setClassToggle('.section03' , 'on')
-          .setTween(tm02).addIndicators().addTo(controller);
+            triggerElement: '#trigger02',
+        }).setClassToggle('.section03', 'on')//動態加(class) on
+            .setTween(tm02).addIndicators().addTo(controller);
+
+        //固定場景
+        var sticky = new TimelineMax();
+        sticky.to('.area1', 1, { x: '100%' })
+            .to('.area2', 1, { x: '100%' })
+            .to('.area3', 1, { x: '100%' })
+            .to('.area4', 1, { x: '100%' })
+
+       new ScrollMagic.Scene({
+            triggerElement : '#trigger03',
+            triggerHook: 0,
+            duration : '400%'
+       }).setPin('.section04')
+       .setTween(sticky)
+       .addIndicators().addTo(controller);
 
     </script>
 </body>
+
 </html>
