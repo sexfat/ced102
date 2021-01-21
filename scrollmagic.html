@@ -92,10 +92,13 @@
         //觸發 function
         new ScrollMagic.Scene({
             triggerElement: '#trigger04',
+            duration: '100%'
         }).on('enter' , function(){
              console.log('enter 進入');
+             $('.section05').css('background-color' , '#f20')
         }).on('leave' , function(){
             console.log('leave 離開');
+            $('.section05').css('background-color' , '#000')
         })
         .addIndicators().addTo(controller);
     </script>
