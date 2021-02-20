@@ -1,7 +1,12 @@
+@charset "UTF-8";
+/****== 註解 ==****/
 body {
-  padding: 20px;
+  padding: 10px 20px 10px 40px;
   margin: 10px auto;
   font-size: 16px;
+  content: "中文字串";
+  font-family: Arial, sans-serif;
+  background-color: #333;
 }
 
 h1 {
