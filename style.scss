@@ -1,18 +1,11 @@
 // 註解
 /****== 註解 ==****/
+@import 'sass/var';
+@import 'sass/common';
 
-$fontSize : 16px; // 數值
-$marginTop : 10px; // 數值
-$color : #f20; // 顏色 
-$text : '中文字串';
-$fontFamily : Arial,
-sans-serif; // 字串
-$padding : 10px 20px 10px 40px; // list
-$button_color : ('blue' : #007bff,
-    'yellow' :#f2ff00,
-    'btn_error' : #f20,
-    'btn_gray' : #333); //map
-$null : null; // 會把屬性刪除
+//layout
+@import 'sass/layout/header';
+@import 'sass/layout/footer';
 
 body {
     padding: $padding;
@@ -23,23 +16,23 @@ body {
     background-color: map-get($button_color, 'btn_gray');
     color: $null;
 
-    .wrapper {
-        h1 {
-            font-size: $fontSize * 4;
+    // .wrapper {
+    //     h1 {
+    //         font-size: $fontSize * 4;
 
-            span {
-                font-size: $fontSize;
+    //         span {
+    //             font-size: $fontSize;
 
-                .icon {
-                    position: relative;
-                    top: 10px
-                }
-            }
-        }
+    //             .icon {
+    //                 position: relative;
+    //                 top: 10px
+    //             }
+    //         }
+    //     }
 
-        h2 {
-            font-size: $fontSize * 3;
-        }
-    }
+    //     h2 {
+    //         font-size: $fontSize * 3;
+    //     }
+    // }
 
 }
