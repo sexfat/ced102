@@ -1,0 +1,16 @@
+$fontSize :  16px;
+$marginTop : 10px;
+
+body {
+    padding: 20px;
+    margin: $marginTop auto;
+    font-size: $fontSize ;
+}
+
+h1 {
+  font-size: $fontSize * 4;  
+}
+
+h2 {
+    font-size: $fontSize * 3;  
+  }
