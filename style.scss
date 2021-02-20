@@ -64,7 +64,7 @@ body {
 }
 
 .btn_default {
-  @include rect(100px , 40px ,#eee);
+  @include rect(160px , 40px ,#eee);
   @include borderRadius(10px);
   display: flex;
   justify-content: center;
@@ -72,27 +72,20 @@ body {
   @include marginAuto(30px);
   cursor: pointer;
   transition: .2s all ease ;
-  //偽類
+  //偽類 hover
   &:hover {
     background-color: #888686;
     color: #fff;
   }
+  // before
   &::before{
-      content: 'be --';
+      content: 'before ';
   }
+  //after
   &::after {
-     content: ' -- af' 
+     content: 'after ' 
   }
 }
-
-// .btn_default:hover {
-//   background-color: #c7c7c7;
-// }
-
-
-
-
-
 .btn_error {
     @include rect(100px , 50px ,#ff0000);
     @include borderRadius(20px);
@@ -100,17 +93,11 @@ body {
     justify-content: center;
     align-items: center;
     // @include marginAuto();
-  }
-
-
-
-
+}
 
 // body {
 // @include rect(100%, auto , #eee );
 // }
-
-
 .btn_blue {
    @include rect(100px, 30px);
    background-color: rgb(193, 240, 63);   
@@ -126,6 +113,25 @@ body {
 .box-w {
 //    @include box(); 
    @include borderRadius();
+}
+
+$f : 10;
+$ff : 20;
+
+// 運算 要注意單位
+h1 {
+ font-size : $f + $ff + px;
+}
+h2{
+    margin-left:  $f - $ff + px;
+}
+h3 {
+      width: 10 * 4 + em  ;
+}
+//除法 要（）
+h4 {
+  font : (28px / 14);
+
 }
 
 

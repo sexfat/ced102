@@ -30,7 +30,7 @@ body {
 }
 
 .btn_default {
-  width: 100px;
+  width: 160px;
   height: 40px;
   background-color: #eee;
   border-radius: 10px;
@@ -48,11 +48,11 @@ body {
 }
 
 .btn_default::before {
-  content: 'be --';
+  content: 'before ';
 }
 
 .btn_default::after {
-  content: ' -- af';
+  content: 'after ';
 }
 
 .btn_error {
@@ -80,5 +80,21 @@ body {
 
 .box-w {
   border-radius: 5px;
+}
+
+h1 {
+  font-size: 30px;
+}
+
+h2 {
+  margin-left: -10px;
+}
+
+h3 {
+  width: 40em;
+}
+
+h4 {
+  font: 2px;
 }
 /*# sourceMappingURL=style.css.map */
