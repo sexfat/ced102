@@ -59,13 +59,31 @@ body {
    background-color: $bgc;
 }
 
+@mixin marginAuto($dis: 0){
+    margin:  $dis auto;
+}
+
 .btn_default {
   @include rect(100px , 40px ,#eee);
   @include borderRadius(10px);
   display: flex;
   justify-content: center;
   align-items: center;
+  @include marginAuto(30px);
 }
+
+.btn_error {
+    @include rect(100px , 50px ,#ff0000);
+    @include borderRadius(20px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    // @include marginAuto();
+  }
+
+
+
+
 
 // body {
 // @include rect(100%, auto , #eee );

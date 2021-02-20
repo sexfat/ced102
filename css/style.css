@@ -37,6 +37,17 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin: 30px auto;
+}
+
+.btn_error {
+  width: 100px;
+  height: 50px;
+  background-color: #ff0000;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .btn_blue {
