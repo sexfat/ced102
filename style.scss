@@ -43,51 +43,56 @@ body {
 // mixin 不帶值
 @mixin box() {
     width: 100px;
-    height : 30px;   
+    height: 30px;
     background-color: #f0ba0b;
     // @include borderRadius();
 }
+
 // border-radius 
-@mixin borderRadius($r:5px){
-   border-radius:  $r;
+@mixin borderRadius($r:5px) {
+    border-radius: $r;
 }
 
 // mixin 帶值  // 預設值 // null值
-@mixin rect($w , $h:$w , $bgc:null ) {
-   width: $w;
-   height: $h; 
-   background-color: $bgc;
+@mixin rect($w, $h:$w, $bgc:null) {
+    width: $w;
+    height: $h;
+    background-color: $bgc;
 }
 
-@mixin marginAuto($dis: 0){
-    margin:  $dis auto;
+@mixin marginAuto($dis: 0) {
+    margin: $dis auto;
 }
 
 .btn_default {
-  @include rect(160px , 40px ,#eee);
-  @include borderRadius(10px);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  @include marginAuto(30px);
-  cursor: pointer;
-  transition: .2s all ease ;
-  //偽類 hover
-  &:hover {
-    background-color: #888686;
-    color: #fff;
-  }
-  // before
-  &::before{
-      content: 'before ';
-  }
-  //after
-  &::after {
-     content: 'after ' 
-  }
+    @include rect(160px, 40px, #eee);
+    @include borderRadius(10px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include marginAuto(30px);
+    cursor: pointer;
+    transition: .2s all ease;
+
+    //偽類 hover
+    &:hover {
+        background-color: #888686;
+        color: #fff;
+    }
+
+    // before
+    &::before {
+        content: 'before ';
+    }
+
+    //after
+    &::after {
+        content: 'after '
+    }
 }
+
 .btn_error {
-    @include rect(100px , 50px ,#ff0000);
+    @include rect(100px, 50px, #ff0000);
     @include borderRadius(20px);
     display: flex;
     justify-content: center;
@@ -99,20 +104,20 @@ body {
 // @include rect(100%, auto , #eee );
 // }
 .btn_blue {
-   @include rect(100px, 30px);
-   background-color: rgb(193, 240, 63);   
-//    @include borderRadius(); 
-   text-align: center;
+    @include rect(100px, 30px);
+    background-color: rgb(193, 240, 63);
+    //    @include borderRadius(); 
+    text-align: center;
 }
 
 .box {
-  @include box();
-//   @include borderRadius();
+    @include box();
+    //   @include borderRadius();
 }
 
 .box-w {
-//    @include box(); 
-   @include borderRadius();
+    //    @include box(); 
+    @include borderRadius();
 }
 
 $f : 10;
@@ -120,23 +125,47 @@ $ff : 20;
 
 // 運算 要注意單位
 h1 {
- font-size : $f + $ff + px;
+    font-size: $f + $ff + px;
 }
-h2{
-    margin-left:  $f - $ff + px;
+
+h2 {
+    margin-left: $f - $ff + px;
 }
+
 h3 {
-      width: 10 * 4 + em  ;
+    width: 10 * 4 + em;
 }
+
 //除法 要（）
-h4 {
-  font : (28px / 14);
 
+$padding : 10px 20px 30px; // list 
+
+h4 {
+    font: (28px / 14);
+    //數值函式運算
+    font-size: (200px / 3);
+    width: floor(200px / 3); //無條件捨去
+    height: round(200px / 3); //四捨五入
+    margin: ceil(200px / 3); //無條件進位
+    padding: nth($padding, 3); // 取值
+    //padding: append($padding , 40px);
+    //length($padding); 長度
 }
 
+// 判斷式  @if  @else  @else if
+@mixin fontSize($device){
+    @if $device == desktop {
+        font-size: 1.8rem;
+    }
+    @else if $device ==laptop {
+        font-size: 1.5rem;
+    }
+    @else {
+        font-size: 1rem;
+    }
+}
 
-
-
-
-
-
+body {
+    @include fontSize(laptop);
+    @include rect(100% , auto ,#888686 )
+}
