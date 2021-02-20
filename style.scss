@@ -13,7 +13,7 @@ body {
     font-size: $fontSize;
     content: $text;
     font-family: $fontFamily;
-    background-color: map-get($button_color, 'btn_gray');
+    background-color: map-get($button_color, 'blue');
     color: $null;
 
     // .wrapper {
@@ -40,21 +40,48 @@ body {
 
 // }
 
-// mixin
+// mixin 不帶值
 @mixin box() {
-    width: 300px;
-    height : 300px;   
+    width: 100px;
+    height : 30px;   
     background-color: #f0ba0b;
+    // @include borderRadius();
 }
 // border-radius 
-@mixin borderRadius(){
-   border-radius:  10px;
-   @include box();
+@mixin borderRadius($r:5px){
+   border-radius:  $r;
+}
+
+// mixin 帶值  // 預設值 // null值
+@mixin rect($w , $h:$w , $bgc:null ) {
+   width: $w;
+   height: $h; 
+   background-color: $bgc;
+}
+
+.btn_default {
+  @include rect(100px , 40px ,#eee);
+  @include borderRadius(10px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+// body {
+// @include rect(100%, auto , #eee );
+// }
+
+
+.btn_blue {
+   @include rect(100px, 30px);
+   background-color: rgb(193, 240, 63);   
+//    @include borderRadius(); 
+   text-align: center;
 }
 
 .box {
-//   @include box();
-  @include borderRadius();
+  @include box();
+//   @include borderRadius();
 }
 
 .box-w {
