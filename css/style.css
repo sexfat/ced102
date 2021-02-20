@@ -9,11 +9,20 @@ body {
   background-color: #333;
 }
 
-h1 {
+body .wrapper h1 {
   font-size: 64px;
 }
 
-h2 {
+body .wrapper h1 span {
+  font-size: 16px;
+}
+
+body .wrapper h1 span .icon {
+  position: relative;
+  top: 10px;
+}
+
+body .wrapper h2 {
   font-size: 48px;
 }
 /*# sourceMappingURL=style.css.map */

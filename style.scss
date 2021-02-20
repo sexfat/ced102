@@ -23,13 +23,26 @@ body {
     font-family: $fontFamily;
     background-color: map-get($button_color, 'btn_gray' );
     color : $null;
+    .wrapper {
+        h1 {
+            font-size: $fontSize * 4;
+            span {
+              font-size: $fontSize ; 
+              .icon {
+                  position: relative;
+                  top: 10px
+              } 
+            }  
+          }
+        h2 {
+            font-size: $fontSize * 3;  
+          }
+    }
+   
 }
 
 
-h1 {
-  font-size: $fontSize * 4;  
-}
 
-h2 {
-    font-size: $fontSize * 3;  
-  }
+
+
+
