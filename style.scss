@@ -13,9 +13,7 @@ $button_color : (
   'btn_error' : #f20,
   'btn_gray' : #333
 );  //map
-
-
-
+$null : null; // 會把屬性刪除
 
 body {
     padding: $padding;
@@ -24,6 +22,7 @@ body {
     content : $text;
     font-family: $fontFamily;
     background-color: map-get($button_color, 'btn_gray' );
+    color : $null;
 }
 
 
