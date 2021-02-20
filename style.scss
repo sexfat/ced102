@@ -1,7 +1,9 @@
 // 註解
 /****== 註解 ==****/
 @import 'sass/var';
+@import 'sass/mixins';
 @import 'sass/common';
+
 
 //layout
 @import 'sass/layout/header';
@@ -15,55 +17,7 @@ body {
     font-family: $fontFamily;
     background-color: map-get($button_color, 'blue');
     color: $null;
-
-    // .wrapper {
-    //     h1 {
-    //         font-size: $fontSize * 4;
-
-    //         span {
-    //             font-size: $fontSize;
-
-    //             .icon {
-    //                 position: relative;
-    //                 top: 10px
-    //             }
-    //         }
-    //     }
-
-    //     h2 {
-    //         font-size: $fontSize * 3;
-    //     }
-    // }
 }
-
-// function name(){
-
-// }
-
-// mixin 不帶值
-@mixin box() {
-    width: 100px;
-    height: 30px;
-    background-color: #f0ba0b;
-    // @include borderRadius();
-}
-
-// border-radius 
-@mixin borderRadius($r:5px) {
-    border-radius: $r;
-}
-
-// mixin 帶值  // 預設值 // null值
-@mixin rect($w, $h:$w, $bgc:null) {
-    width: $w;
-    height: $h;
-    background-color: $bgc;
-}
-
-@mixin marginAuto($dis: 0) {
-    margin: $dis auto;
-}
-
 .btn_default {
     @include rect(160px, 40px, #eee);
     @include borderRadius(10px);
@@ -152,28 +106,26 @@ h4 {
     //length($padding); 長度
 }
 
-// 判斷式  @if  @else  @else if
-@mixin fontSize($device){
-    @if $device == desktop {
-        font-size: 1.8rem;
-    }
-    @else if $device ==laptop {
-        font-size: 1.5rem;
-    }
-    @else {
-        font-size: 1rem;
-    }
-}
 
 body {
     @include fontSize(laptop);
-    @include rect(100% , auto ,#888686 )
+    @include rect(100%, auto, #888686)
 }
 
-// 條件成立與否
- $a : 100;
+// 條件成立與否  >=  <=  ==  !=
+$a : 100;
+
 .box {
-   @if $a >= 100 {
-      width: $a * 2;
-   } 
+    @if $a>=100 {
+        width: $a * 2;
+    }
+}
+
+// 關聯條件
+
+$textcolor : #000;
+
+
+.text-color {
+    @include textColor(#444);
 }

@@ -1,0 +1,50 @@
+// mixin 不帶值
+@mixin box() {
+    width: 100px;
+    height: 30px;
+    background-color: #f0ba0b;
+    // @include borderRadius();
+}
+
+// border-radius 
+@mixin borderRadius($r:5px) {
+    border-radius: $r;
+}
+
+// mixin 帶值  // 預設值 // null值
+@mixin rect($w, $h:$w, $bgc:null) {
+    width: $w;
+    height: $h;
+    background-color: $bgc;
+}
+
+//
+@mixin marginAuto($dis: 0) {
+    margin: $dis auto;
+}
+
+// 判斷式  @if  @else  @else if
+@mixin fontSize($device) {
+    @if $device==desktop {
+        font-size: 1.8rem;
+    }
+
+    @else if $device==laptop {
+        font-size: 1.5rem;
+    }
+
+    @else {
+        font-size: 1rem;
+    }
+}
+
+//
+@mixin textColor($textcolor) {
+    @if $textcolor==black and $textcolor==#000 {
+        color: $textcolor;
+    }
+
+    @else {
+        color: greenyellow;
+    }
+}
