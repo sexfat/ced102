@@ -169,3 +169,11 @@ body {
     @include fontSize(laptop);
     @include rect(100% , auto ,#888686 )
 }
+
+// 條件成立與否
+ $a : 100;
+.box {
+   @if $a >= 100 {
+      width: $a * 2;
+   } 
+}
