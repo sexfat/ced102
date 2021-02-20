@@ -38,6 +38,21 @@ body {
   justify-content: center;
   align-items: center;
   margin: 30px auto;
+  cursor: pointer;
+  transition: .2s all ease;
+}
+
+.btn_default:hover {
+  background-color: #888686;
+  color: #fff;
+}
+
+.btn_default::before {
+  content: 'be --';
+}
+
+.btn_default::after {
+  content: ' -- af';
 }
 
 .btn_error {

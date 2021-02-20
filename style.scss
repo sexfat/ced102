@@ -70,7 +70,28 @@ body {
   justify-content: center;
   align-items: center;
   @include marginAuto(30px);
+  cursor: pointer;
+  transition: .2s all ease ;
+  //偽類
+  &:hover {
+    background-color: #888686;
+    color: #fff;
+  }
+  &::before{
+      content: 'be --';
+  }
+  &::after {
+     content: ' -- af' 
+  }
 }
+
+// .btn_default:hover {
+//   background-color: #c7c7c7;
+// }
+
+
+
+
 
 .btn_error {
     @include rect(100px , 50px ,#ff0000);
