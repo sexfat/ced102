@@ -285,7 +285,7 @@ $btn-color : (
     }
 }
 
-.box_t {
+.box_prefix {
   @include prefix(transition, .4s all ease)
 }
 

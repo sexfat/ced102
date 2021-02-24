@@ -448,7 +448,7 @@ body {
   color: #fbd06d;
 }
 
-.box_t {
+.box_prefix {
   transition: 0.4s all ease;
   -webkit-transition: 0.4s all ease;
   -moz-transition: 0.4s all ease;
