@@ -253,25 +253,29 @@ $fontscale :(
 // } 
 
 $btn-color : (
-   'error' : red,
-   'primary' : #0091ff,
+   'error' : rgb(255, 119, 0),
+   'primary' : rgb(47, 161, 249),
    'warning'  : #fcfc25,
-   'info'  : #04ff92
+   'info'  : #042f92
 );
 
-
-@each $k , $v in $btn-color {
-    .btn-#{$k} {
-        @include rect(150px, 40px, $v);
-        cursor: pointer;
-        border-radius: 5px;
-        border: 1px solid $v;
-        transition: .4s all ease;
-        &:hover {
-           background-color: darken($v , 30); 
-           color : invert($v);
-        }
-     }
+@mixin btn-moudles($btn-color) {
+    @each $k , $v in $btn-color {
+        .btn-#{$k} {
+            @include rect(150px, 40px, $v);
+            cursor: pointer;
+            border-radius: 5px;
+            border: 1px solid $v;
+            transition: .4s all ease;
+            &:hover {
+               background-color: darken($v , 30); 
+               color : invert($v);
+            }
+         }
+    }
 }
+
+@include btn-moudles($btn-color);
+
 
 

@@ -391,31 +391,31 @@ body {
 .btn-error {
   width: 150px;
   height: 40px;
-  background-color: red;
+  background-color: #ff7700;
   cursor: pointer;
   border-radius: 5px;
-  border: 1px solid red;
+  border: 1px solid #ff7700;
   transition: .4s all ease;
 }
 
 .btn-error:hover {
-  background-color: #660000;
-  color: cyan;
+  background-color: #663000;
+  color: #0088ff;
 }
 
 .btn-primary {
   width: 150px;
   height: 40px;
-  background-color: #0091ff;
+  background-color: #2fa1f9;
   cursor: pointer;
   border-radius: 5px;
-  border: 1px solid #0091ff;
+  border: 1px solid #2fa1f9;
   transition: .4s all ease;
 }
 
 .btn-primary:hover {
-  background-color: #003a66;
-  color: #ff6e00;
+  background-color: #04508b;
+  color: #d05e06;
 }
 
 .btn-warning {
@@ -436,15 +436,15 @@ body {
 .btn-info {
   width: 150px;
   height: 40px;
-  background-color: #04ff92;
+  background-color: #042f92;
   cursor: pointer;
   border-radius: 5px;
-  border: 1px solid #04ff92;
+  border: 1px solid #042f92;
   transition: .4s all ease;
 }
 
 .btn-info:hover {
-  background-color: #006a3c;
-  color: #fb006d;
+  background-color: black;
+  color: #fbd06d;
 }
 /*# sourceMappingURL=style.css.map */
