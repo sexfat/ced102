@@ -109,7 +109,7 @@ h4 {
 
 
 body {
-    @include fontSize(laptop);
+    @include fontSize(moblie);
     @include rect(100%, auto, #888686)
 }
 
@@ -130,14 +130,16 @@ $textcolor : #000;
     @include textColor(#444);
 }
 
+
+//for 迴圈
 @for $i from 1 through 10 {
     .box_#{$i} {
         width: $i * 1px;
     }
 }
 
-
-@mixin push_left($num , $dis) {
+// $dis 方向
+@mixin push_left($num, $dis) {
     @for $i from 1 through $num {
         .push_#{$dis}_#{$i} {
             position: relative;
@@ -146,4 +148,44 @@ $textcolor : #000;
     }
 }
 
-@include push_left(20, bottom);
+// @include push_left(100, left);
+// @include push_left(100, top);
+// @include push_left(100, right);
+
+.content {
+    margin: 0 auto;
+    width: 100%;
+
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.red {
+    background-color: #f20;
+}
+
+.blue {
+    background-color: rgb(67, 64, 250);
+}
+
+.inner {
+    font-size: 0;
+}
+
+
+@mixin  grid($col) {
+    @for $i from 1 through $col {
+        .col-#{$i} {
+            width: ($i / $col) * 100%;
+            display: inline-block;
+            height: 300px;
+            border: 0;
+    
+        }
+    }
+}
+
+@include grid(12);
+
