@@ -18,6 +18,7 @@ body {
     background-color: map-get($button_color, 'blue');
     color: $null;
 }
+
 .btn_default {
     @include rect(160px, 40px, #eee);
     @include borderRadius(10px);
@@ -125,7 +126,24 @@ $a : 100;
 
 $textcolor : #000;
 
-
 .text-color {
     @include textColor(#444);
 }
+
+@for $i from 1 through 10 {
+    .box_#{$i} {
+        width: $i * 1px;
+    }
+}
+
+
+@mixin push_left($num , $dis) {
+    @for $i from 1 through $num {
+        .push_#{$dis}_#{$i} {
+            position: relative;
+            #{$dis}: $i * 1px;
+        }
+    }
+}
+
+@include push_left(20, bottom);

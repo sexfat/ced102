@@ -117,4 +117,144 @@ body {
 .text-color {
   color: greenyellow;
 }
+
+.box_1 {
+  width: 1px;
+}
+
+.box_2 {
+  width: 2px;
+}
+
+.box_3 {
+  width: 3px;
+}
+
+.box_4 {
+  width: 4px;
+}
+
+.box_5 {
+  width: 5px;
+}
+
+.box_6 {
+  width: 6px;
+}
+
+.box_7 {
+  width: 7px;
+}
+
+.box_8 {
+  width: 8px;
+}
+
+.box_9 {
+  width: 9px;
+}
+
+.box_10 {
+  width: 10px;
+}
+
+.push_bottom_1 {
+  position: relative;
+  bottom: 1px;
+}
+
+.push_bottom_2 {
+  position: relative;
+  bottom: 2px;
+}
+
+.push_bottom_3 {
+  position: relative;
+  bottom: 3px;
+}
+
+.push_bottom_4 {
+  position: relative;
+  bottom: 4px;
+}
+
+.push_bottom_5 {
+  position: relative;
+  bottom: 5px;
+}
+
+.push_bottom_6 {
+  position: relative;
+  bottom: 6px;
+}
+
+.push_bottom_7 {
+  position: relative;
+  bottom: 7px;
+}
+
+.push_bottom_8 {
+  position: relative;
+  bottom: 8px;
+}
+
+.push_bottom_9 {
+  position: relative;
+  bottom: 9px;
+}
+
+.push_bottom_10 {
+  position: relative;
+  bottom: 10px;
+}
+
+.push_bottom_11 {
+  position: relative;
+  bottom: 11px;
+}
+
+.push_bottom_12 {
+  position: relative;
+  bottom: 12px;
+}
+
+.push_bottom_13 {
+  position: relative;
+  bottom: 13px;
+}
+
+.push_bottom_14 {
+  position: relative;
+  bottom: 14px;
+}
+
+.push_bottom_15 {
+  position: relative;
+  bottom: 15px;
+}
+
+.push_bottom_16 {
+  position: relative;
+  bottom: 16px;
+}
+
+.push_bottom_17 {
+  position: relative;
+  bottom: 17px;
+}
+
+.push_bottom_18 {
+  position: relative;
+  bottom: 18px;
+}
+
+.push_bottom_19 {
+  position: relative;
+  bottom: 19px;
+}
+
+.push_bottom_20 {
+  position: relative;
+  bottom: 20px;
+}
 /*# sourceMappingURL=style.css.map */
