@@ -289,6 +289,34 @@ $btn-color : (
   @include prefix(transition, .4s all ease)
 }
 
+.red {
+    background-color: #f20;
+}
+
+@mixin red() {
+    background-color: #f20;
+}
+
+.bg-image {
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.bg-imgs {
+  @extend .bg-image;  
+  background-image: url('img/aaa.jpg');
+}
+
+
+.box {
+   width: 100px;
+   height: 30px;
+   @extend .red ;
+//   @include red();
+}
+
+
 
 
 

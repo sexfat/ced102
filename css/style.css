@@ -171,7 +171,7 @@ body {
   width: 100%;
 }
 
-.red {
+.red, .box {
   background-color: #f20;
 }
 
@@ -454,5 +454,24 @@ body {
   -moz-transition: 0.4s all ease;
   -ms-transition: 0.4s all ease;
   -o-transition: 0.4s all ease;
+}
+
+.red, .box {
+  background-color: #f20;
+}
+
+.bg-image, .bg-imgs {
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.bg-imgs {
+  background-image: url("img/aaa.jpg");
+}
+
+.box {
+  width: 100px;
+  height: 30px;
 }
 /*# sourceMappingURL=style.css.map */
