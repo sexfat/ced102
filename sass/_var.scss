@@ -6,7 +6,8 @@ $text : '中文字串';
 $fontFamily : Arial,
 sans-serif; // 字串
 $padding : 10px 20px 10px 40px; // list
-$button_color : ('blue' : #007bff,
+$button_color : (
+    'blue' : #007bff,
     'yellow' :#f2ff00,
     'btn_error' : #f20,
     'btn_gray' : #333); //map

@@ -112,6 +112,7 @@ body {
     @include fontSize(moblie);
     @include rect(100%, auto, #888686)
 }
+
 * {
     box-sizing: border-box;
 }
@@ -178,7 +179,7 @@ $textcolor : #000;
 
 
 //grid system
-@mixin  grid($col) {
+@mixin grid($col) {
     @for $i from 1 through $col {
         .col-#{$i} {
             width: ($i / $col) * 100%;
@@ -196,37 +197,75 @@ $textcolor : #000;
 //each list 
 $list : icon a1 a2 a3 a4 a5 bg;
 
-@each  $img in $list {
+@each $img in $list {
     .img_#{$img} {
         background-image: url('#{$img}.jpg');
         background-repeat: no-repeat;
         background-size: cover;
-        @include rect(100% , 300px , #eee);
+        @include rect(100%, 300px, #eee);
     }
 }
 
-@mixin imgUrl($url){
-    @each  $img in $url{
+@mixin img_Url($url , $format) {
+    @each $img in $url {
         .img_#{$img} {
-            background-image: url('#{$img}.jpg');
+            background-image: url('#{$img}.#{$format}');
             background-repeat: no-repeat;
             background-size: cover;
+            @content; // 額外增加屬性
         }
     }
 }
 
-@include imgUrl(w1 , w2);
+
+@include img-Url(q1 q2 q3 q4 , jpg) {
+    height: 300px
+};
+
+@include img-Url(g1 g2 , gif) {
+    width: 80%
+};
 
 
+//map 用each 取值
 
+$fontscale :(
+    'small' : '16px',
+    'medium' : '20px',
+    'large' : '28px',
+    'xlarge' : '36px',
+) ;  //map
 
+.font {
+    font-size: map-get($fontscale, medium);
 }
 
+@each  $key , $val in $fontscale {
+   .#{$key} {
+     font-size: $val;
+   }
+}
+
+// @mixin btn-module($w , $h ,$color){
+//    .btn-#{$color} {
+//       @include rect($w, $h, $color);
+//    }
+// } 
+
+$btn-color : (
+   'error' : 'red',
+   'primary' : '#0091ff',
+   'warning'  : '#fcfc25',
+   'info'  : #04ff92
+);
 
 
-
-
-
-
+@each $k , $v in $btn-color {
+    .btn-#{$k} {
+        @include rect(150px, 30px, $v);
+        cursor: pointer;
+        border: 1px solid $v;
+     }
+}
 
 

@@ -325,4 +325,98 @@ body {
   height: 300px;
   background-color: #eee;
 }
+
+.img_q1 {
+  background-image: url("q1.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 300px;
+}
+
+.img_q2 {
+  background-image: url("q2.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 300px;
+}
+
+.img_q3 {
+  background-image: url("q3.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 300px;
+}
+
+.img_q4 {
+  background-image: url("q4.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 300px;
+}
+
+.img_g1 {
+  background-image: url("g1.gif");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 80%;
+}
+
+.img_g2 {
+  background-image: url("g2.gif");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 80%;
+}
+
+.font {
+  font-size: "20px";
+}
+
+.small {
+  font-size: "16px";
+}
+
+.medium {
+  font-size: "20px";
+}
+
+.large {
+  font-size: "28px";
+}
+
+.xlarge {
+  font-size: "36px";
+}
+
+.btn-error {
+  width: 150px;
+  height: 30px;
+  background-color: "red";
+  cursor: pointer;
+  border: 1px solid "red";
+}
+
+.btn-primary {
+  width: 150px;
+  height: 30px;
+  background-color: "#0091ff";
+  cursor: pointer;
+  border: 1px solid "#0091ff";
+}
+
+.btn-warning {
+  width: 150px;
+  height: 30px;
+  background-color: "#fcfc25";
+  cursor: pointer;
+  border: 1px solid "#fcfc25";
+}
+
+.btn-info {
+  width: 150px;
+  height: 30px;
+  background-color: #04ff92;
+  cursor: pointer;
+  border: 1px solid #04ff92;
+}
 /*# sourceMappingURL=style.css.map */
