@@ -278,4 +278,22 @@ $btn-color : (
 @include btn-moudles($btn-color);
 
 
+// prefix 跨瀏覽器 
+@mixin prefix($property , $val) {
+    @each  $prefix in  '' , -webkit- , -moz- ,-ms-  , -o-{
+        #{$prefix}#{$property}:$val;
+    }
+}
+
+.box_t {
+  @include prefix(transition, .4s all ease)
+}
+
+
+
+
+
+
+
+
 

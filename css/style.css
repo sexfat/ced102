@@ -447,4 +447,12 @@ body {
   background-color: black;
   color: #fbd06d;
 }
+
+.box_t {
+  transition: 0.4s all ease;
+  -webkit-transition: 0.4s all ease;
+  -moz-transition: 0.4s all ease;
+  -ms-transition: 0.4s all ease;
+  -o-transition: 0.4s all ease;
+}
 /*# sourceMappingURL=style.css.map */
