@@ -265,29 +265,64 @@ body {
 
 .img_icon {
   background-image: url("icon.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 300px;
+  background-color: #eee;
 }
 
 .img_a1 {
   background-image: url("a1.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 300px;
+  background-color: #eee;
 }
 
 .img_a2 {
   background-image: url("a2.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 300px;
+  background-color: #eee;
 }
 
 .img_a3 {
   background-image: url("a3.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 300px;
+  background-color: #eee;
 }
 
 .img_a4 {
   background-image: url("a4.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 300px;
+  background-color: #eee;
 }
 
 .img_a5 {
   background-image: url("a5.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 300px;
+  background-color: #eee;
 }
 
 .img_bg {
   background-image: url("bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 300px;
+  background-color: #eee;
 }
 /*# sourceMappingURL=style.css.map */

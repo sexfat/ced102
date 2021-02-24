@@ -192,13 +192,37 @@ $textcolor : #000;
 @include grid(12);
 
 
+
+//each list 
 $list : icon a1 a2 a3 a4 a5 bg;
 
 @each  $img in $list {
     .img_#{$img} {
         background-image: url('#{$img}.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        @include rect(100% , 300px , #eee);
     }
 }
+
+@mixin imgUrl($url){
+    @each  $img in $url{
+        .img_#{$img} {
+            background-image: url('#{$img}.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+    }
+}
+
+@include imgUrl(w1 , w2);
+
+
+
+
+}
+
+
 
 
 
