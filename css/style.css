@@ -390,33 +390,53 @@ body {
 
 .btn-error {
   width: 150px;
-  height: 30px;
-  background-color: "red";
+  height: 40px;
+  background-color: red;
   cursor: pointer;
-  border: 1px solid "red";
+  border-radius: 5px;
+  border: 1px solid red;
+}
+
+.btn-error:hover {
+  background-color: #660000;
 }
 
 .btn-primary {
   width: 150px;
-  height: 30px;
-  background-color: "#0091ff";
+  height: 40px;
+  background-color: #0091ff;
   cursor: pointer;
-  border: 1px solid "#0091ff";
+  border-radius: 5px;
+  border: 1px solid #0091ff;
+}
+
+.btn-primary:hover {
+  background-color: #003a66;
 }
 
 .btn-warning {
   width: 150px;
-  height: 30px;
-  background-color: "#fcfc25";
+  height: 40px;
+  background-color: #fcfc25;
   cursor: pointer;
-  border: 1px solid "#fcfc25";
+  border-radius: 5px;
+  border: 1px solid #fcfc25;
+}
+
+.btn-warning:hover {
+  background-color: #868602;
 }
 
 .btn-info {
   width: 150px;
-  height: 30px;
+  height: 40px;
   background-color: #04ff92;
   cursor: pointer;
+  border-radius: 5px;
   border: 1px solid #04ff92;
+}
+
+.btn-info:hover {
+  background-color: #006a3c;
 }
 /*# sourceMappingURL=style.css.map */

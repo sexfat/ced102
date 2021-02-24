@@ -253,18 +253,22 @@ $fontscale :(
 // } 
 
 $btn-color : (
-   'error' : 'red',
-   'primary' : '#0091ff',
-   'warning'  : '#fcfc25',
+   'error' : red,
+   'primary' : #0091ff,
+   'warning'  : #fcfc25,
    'info'  : #04ff92
 );
 
 
 @each $k , $v in $btn-color {
     .btn-#{$k} {
-        @include rect(150px, 30px, $v);
+        @include rect(150px, 40px, $v);
         cursor: pointer;
+        border-radius: 5px;
         border: 1px solid $v;
+        &:hover {
+           background-color: darken($v , 30); 
+        }
      }
 }
 
