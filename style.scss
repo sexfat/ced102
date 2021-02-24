@@ -112,6 +112,14 @@ body {
     @include fontSize(moblie);
     @include rect(100%, auto, #888686)
 }
+* {
+    box-sizing: border-box;
+}
+
+.inner {
+    font-size: 0;
+}
+
 
 // 條件成立與否  >=  <=  ==  !=
 $a : 100;
@@ -158,9 +166,6 @@ $textcolor : #000;
 
 }
 
-* {
-    box-sizing: border-box;
-}
 
 .red {
     background-color: #f20;
@@ -170,11 +175,9 @@ $textcolor : #000;
     background-color: rgb(67, 64, 250);
 }
 
-.inner {
-    font-size: 0;
-}
 
 
+//grid system
 @mixin  grid($col) {
     @for $i from 1 through $col {
         .col-#{$i} {
@@ -182,10 +185,24 @@ $textcolor : #000;
             display: inline-block;
             height: 300px;
             border: 0;
-    
         }
     }
 }
 
 @include grid(12);
+
+
+$list : icon a1 a2 a3 a4 a5 bg;
+
+@each  $img in $list {
+    .img_#{$img} {
+        background-image: url('#{$img}.jpg');
+    }
+}
+
+
+
+
+
+
 
