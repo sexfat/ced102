@@ -266,8 +266,10 @@ $btn-color : (
         cursor: pointer;
         border-radius: 5px;
         border: 1px solid $v;
+        transition: .4s all ease;
         &:hover {
            background-color: darken($v , 30); 
+           color : invert($v);
         }
      }
 }
