@@ -460,14 +460,18 @@ body {
   background-color: #f20;
 }
 
-.bg-image, .bg-imgs {
+.bg-imga, .bg-imgb {
   width: 100%;
   background-size: cover;
   background-repeat: no-repeat;
 }
 
-.bg-imgs {
+.bg-imga {
   background-image: url("img/aaa.jpg");
+}
+
+.bg-imgb {
+  background-image: url("img/bbb.jpg");
 }
 
 .box {

@@ -147,15 +147,7 @@ $textcolor : #000;
     }
 }
 
-// $dis 方向
-@mixin push_left($num, $dis) {
-    @for $i from 1 through $num {
-        .push_#{$dis}_#{$i} {
-            position: relative;
-            #{$dis}: $i * 1px;
-        }
-    }
-}
+
 
 // @include push_left(100, left);
 // @include push_left(100, top);
@@ -178,17 +170,6 @@ $textcolor : #000;
 
 
 
-//grid system
-@mixin grid($col) {
-    @for $i from 1 through $col {
-        .col-#{$i} {
-            width: ($i / $col) * 100%;
-            display: inline-block;
-            height: 300px;
-            border: 0;
-        }
-    }
-}
 
 @include grid(12);
 
@@ -206,16 +187,7 @@ $list : icon a1 a2 a3 a4 a5 bg;
     }
 }
 
-@mixin img_Url($url , $format) {
-    @each $img in $url {
-        .img_#{$img} {
-            background-image: url('#{$img}.#{$format}');
-            background-repeat: no-repeat;
-            background-size: cover;
-            @content; // 額外增加屬性
-        }
-    }
-}
+
 
 
 @include img-Url(q1 q2 q3 q4 , jpg) {
@@ -252,28 +224,8 @@ $fontscale :(
 //    }
 // } 
 
-$btn-color : (
-   'error' : rgb(255, 119, 0),
-   'primary' : rgb(47, 161, 249),
-   'warning'  : #fcfc25,
-   'info'  : #042f92
-);
 
-@mixin btn-moudles($btn-color) {
-    @each $k , $v in $btn-color {
-        .btn-#{$k} {
-            @include rect(150px, 40px, $v);
-            cursor: pointer;
-            border-radius: 5px;
-            border: 1px solid $v;
-            transition: .4s all ease;
-            &:hover {
-               background-color: darken($v , 30); 
-               color : invert($v);
-            }
-         }
-    }
-}
+
 
 @include btn-moudles($btn-color);
 
@@ -297,16 +249,35 @@ $btn-color : (
     background-color: #f20;
 }
 
-.bg-image {
+%bg-image {
     width: 100%;
     background-size: cover;
     background-repeat: no-repeat;
 }
 
-.bg-imgs {
-  @extend .bg-image;  
+
+
+
+@mixin bg-image(){
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.bg-imga {
+    // @include bg-image();
+      @extend %bg-image; 
   background-image: url('img/aaa.jpg');
 }
+
+//a {}
+
+
+.bg-imgb {
+    @extend %bg-image; 
+    // @include bg-image(); 
+    background-image: url('img/bbb.jpg');
+  }
 
 
 .box {

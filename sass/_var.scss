@@ -12,3 +12,12 @@ $button_color : (
     'btn_error' : #f20,
     'btn_gray' : #333); //map
 $null : null; // 會把屬性刪除
+
+
+
+$btn-color : (
+   'error' : rgb(255, 119, 0),
+   'primary' : rgb(47, 161, 249),
+   'warning'  : #fcfc25,
+   'info'  : #042f92
+);

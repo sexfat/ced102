@@ -48,3 +48,57 @@
         color: greenyellow;
     }
 }
+
+
+// $dis 方向
+@mixin push_left($num, $dis) {
+    @for $i from 1 through $num {
+        .push_#{$dis}_#{$i} {
+            position: relative;
+            #{$dis}: $i * 1px;
+        }
+    }
+}
+
+
+//grid system
+@mixin grid($col) {
+    @for $i from 1 through $col {
+        .col-#{$i} {
+            width: ($i / $col) * 100%;
+            display: inline-block;
+            height: 300px;
+            border: 0;
+        }
+    }
+}
+
+
+//img
+@mixin img_Url($url , $format) {
+    @each $img in $url {
+        .img_#{$img} {
+            background-image: url('#{$img}.#{$format}');
+            background-repeat: no-repeat;
+            background-size: cover;
+            @content; // 額外增加屬性
+        }
+    }
+}
+
+@mixin btn-moudles($btn-color) {
+    @each $k , $v in $btn-color {
+        .btn-#{$k} {
+            @include rect(150px, 40px, $v);
+            cursor: pointer;
+            border-radius: 5px;
+            border: 1px solid $v;
+            transition: .4s all ease;
+            &:hover {
+               background-color: darken($v , 30); 
+               color : invert($v);
+            }
+         }
+    }
+}
+
