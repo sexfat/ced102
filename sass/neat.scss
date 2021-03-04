@@ -27,6 +27,9 @@ section {
 
 .wrapper_12 {
     @include grid-container;
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
     .sidebar {
         @include grid-column(2);
         @extend .red ;
@@ -40,4 +43,20 @@ section {
         @extend .red ;
     }
 
+}
+
+$setting : (
+  gutter : 10px,
+);
+
+
+
+.wrapper_all_12 {
+    @include grid-container;
+    .col_1 {
+        @include grid-column(1 , $setting);
+        @extend .blue ;
+        height: 100vh;
+         
+    }
 }

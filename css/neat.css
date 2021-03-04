@@ -13,12 +13,18 @@ section {
   background-color: #eb0047;
 }
 
-.blue {
+.blue, .wrapper_all_12 .col_1 {
   background-color: blue;
 }
 
 .h100 {
   height: 100vh;
+}
+
+.wrapper_12 {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
 }
 
 .wrapper_12::after {
@@ -43,5 +49,18 @@ section {
   width: calc(16.66667% - 23.33333px);
   float: left;
   margin-left: 20px;
+}
+
+.wrapper_all_12::after {
+  clear: both;
+  content: "";
+  display: block;
+}
+
+.wrapper_all_12 .col_1 {
+  width: calc(8.33333% - 10.83333px);
+  float: left;
+  margin-left: 10px;
+  height: 100vh;
 }
 /*# sourceMappingURL=neat.css.map */
