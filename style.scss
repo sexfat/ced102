@@ -333,7 +333,7 @@ $breakpoint_each :(
 
 
     @mixin respond($rwd , $style:all) {
-    @each $break,$val in $breakpoint_each {
+    @each $break , $val in $breakpoint_each {
         @if $rwd == $break {
             @media #{$style} and (min-width: $val) {
                 @content;
