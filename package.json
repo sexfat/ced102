@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/sexfat/ced102#readme",
   "dependencies": {
-    "bootstrap-sass": "^3.4.1"
+    "bootstrap-sass": "^3.4.1",
+    "bourbon-neat": "^4.0.0"
   }
 }
