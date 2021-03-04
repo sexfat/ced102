@@ -102,3 +102,28 @@
     }
 }
 
+//rwd
+
+@mixin rwd($breakpoint) {
+    // 桌機
+    @if $breakpoint=='desktop' {
+        @media all and (min-width: $desktop) {
+            @content;
+        }
+    }
+
+    @else if $breakpoint=='medium' {
+        //平板
+        @media all and (min-width: $medium) {
+            @content;
+        }
+    }
+
+    @else if $breakpoint=='small' {
+        //手機
+        @media all and (max-width: $small) {
+            @content;
+        }
+    }
+}
+

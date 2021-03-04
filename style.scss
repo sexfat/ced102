@@ -6,6 +6,12 @@
 
 
 //layout
+
+
+@import './sass/layout/large';
+@import './sass/layout/medium';
+@import './sass/layout/small';
+
 @import 'sass/layout/header';
 @import 'sass/layout/footer';
 
@@ -192,30 +198,34 @@ $list : icon a1 a2 a3 a4 a5 bg;
 
 @include img-Url(q1 q2 q3 q4 , jpg) {
     height: 300px
-};
+}
+
+;
 
 @include img-Url(g1 g2 , gif) {
     width: 80%
-};
+}
+
+;
 
 
 //map 用each 取值
 
-$fontscale :(
-    'small' : '16px',
+$fontscale :('small' : '16px',
     'medium' : '20px',
     'large' : '28px',
     'xlarge' : '36px',
-) ;  //map
+); //map
 
 .font {
     font-size: map-get($fontscale, medium);
 }
 
-@each  $key , $val in $fontscale {
-   .#{$key} {
-     font-size: $val;
-   }
+@each $key,
+$val in $fontscale {
+    .#{$key} {
+        font-size: $val;
+    }
 }
 
 // @mixin btn-module($w , $h ,$color){
@@ -231,14 +241,19 @@ $fontscale :(
 
 
 // prefix 跨瀏覽器 
-@mixin prefix($property , $val) {
-    @each  $prefix in  '' , -webkit- , -moz- ,-ms-  , -o-{
-        #{$prefix}#{$property}:$val;
+@mixin prefix($property, $val) {
+
+    @each $prefix in '',
+    -webkit-,
+    -moz-,
+    -ms-,
+    -o- {
+        #{$prefix}#{$property}: $val;
     }
 }
 
 .box_prefix {
-  @include prefix(transition, .4s all ease)
+    @include prefix(transition, .4s all ease)
 }
 
 .red {
@@ -258,7 +273,7 @@ $fontscale :(
 
 
 
-@mixin bg-image(){
+@mixin bg-image() {
     width: 100%;
     background-size: cover;
     background-repeat: no-repeat;
@@ -266,27 +281,26 @@ $fontscale :(
 
 .bg-imga {
     // @include bg-image();
-      @extend %bg-image; 
-  background-image: url('img/aaa.jpg');
+    @extend %bg-image;
+    background-image: url('img/aaa.jpg');
 }
 
 //a {}
 
 
 .bg-imgb {
-    @extend %bg-image; 
+    @extend %bg-image;
     // @include bg-image(); 
     background-image: url('img/bbb.jpg');
-  }
+}
 
 
 .box {
-   width: 100px;
-   height: 30px;
-   @extend .red ;
-//   @include red();
+    width: 100px;
+    height: 30px;
+    @extend .red;
+    //   @include red();
 }
-
 
 
 
