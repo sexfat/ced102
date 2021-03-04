@@ -315,10 +315,39 @@ $val in $fontscale {
     }
 }
 
-
-
 @include maxbreakpoint(721) {
     h2 {
         font-size: 40px;
     }
 }
+
+
+// rwd each
+$breakpoint_each :(
+    'x-small' : 464px,
+    'small' : 720px,
+    'medium' : 996px,
+    'large' : 1200px,
+    'x-large' : 1920px,
+    );
+
+
+    @mixin respond($rwd) {
+    @each $break,$val in $breakpoint_each {
+        @if $rwd==$break {
+            @media all and (min-width: $val) {
+                @content;
+            }
+        }
+    }
+}
+
+
+@include respond(x-small) {
+    h3 {
+       font-size: 30px; 
+    }
+}
+
+
+

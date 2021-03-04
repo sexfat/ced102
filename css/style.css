@@ -502,4 +502,10 @@ body {
     font-size: 40px;
   }
 }
+
+@media all and (min-width: 464px) {
+  h3 {
+    font-size: 30px;
+  }
+}
 /*# sourceMappingURL=style.css.map */
