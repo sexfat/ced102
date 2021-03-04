@@ -303,10 +303,22 @@ $val in $fontscale {
 }
 
 
+@mixin minbreakpoint($num) {
+    @media all and (min-width :$num + px) {
+        @content;
+    }
+}
+
+@mixin maxbreakpoint($num) {
+    @media all and (max-width :$num + px) {
+        @content;
+    }
+}
 
 
 
-
-
-
-
+@include maxbreakpoint(721) {
+    h2 {
+        font-size: 40px;
+    }
+}

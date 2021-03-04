@@ -496,4 +496,10 @@ body {
   width: 100px;
   height: 30px;
 }
+
+@media all and (max-width: 721px) {
+  h2 {
+    font-size: 40px;
+  }
+}
 /*# sourceMappingURL=style.css.map */
