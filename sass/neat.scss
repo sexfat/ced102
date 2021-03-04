@@ -22,3 +22,22 @@ section {
 .h100 {
     height: 100vh;
 }
+
+
+
+.wrapper_12 {
+    @include grid-container;
+    .sidebar {
+        @include grid-column(2);
+        @extend .red ;
+    }
+    .content {
+        @include grid-column(8);
+        @extend .red ;
+    }
+    .menu {
+        @include grid-column(2);
+        @extend .red ;
+    }
+
+}

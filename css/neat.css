@@ -9,7 +9,7 @@ section {
   height: 100vh;
 }
 
-.red {
+.red, .wrapper_12 .sidebar, .wrapper_12 .content, .wrapper_12 .menu {
   background-color: #eb0047;
 }
 
@@ -19,5 +19,29 @@ section {
 
 .h100 {
   height: 100vh;
+}
+
+.wrapper_12::after {
+  clear: both;
+  content: "";
+  display: block;
+}
+
+.wrapper_12 .sidebar {
+  width: calc(16.66667% - 23.33333px);
+  float: left;
+  margin-left: 20px;
+}
+
+.wrapper_12 .content {
+  width: calc(66.66667% - 33.33333px);
+  float: left;
+  margin-left: 20px;
+}
+
+.wrapper_12 .menu {
+  width: calc(16.66667% - 23.33333px);
+  float: left;
+  margin-left: 20px;
 }
 /*# sourceMappingURL=neat.css.map */
