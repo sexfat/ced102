@@ -4,6 +4,9 @@
 @import 'sass/mixins';
 @import 'sass/common';
 
+// bootstrap sass
+@import 'node_modules/bootstrap-sass/assets/stylesheets/bootstrap';
+
 
 //layout
 
@@ -14,6 +17,8 @@
 
 @import 'sass/layout/header';
 @import 'sass/layout/footer';
+
+
 
 body {
     padding: $padding;
