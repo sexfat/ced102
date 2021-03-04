@@ -47,7 +47,20 @@ section {
 
 $setting : (
   gutter : 10px,
+  direction : ltr, // rtl
 );
+
+
+$setting_medium :(
+  gutter : 0px,
+  media : 'all and (max-width: 996px)'
+);
+
+$setting_small :(
+  gutter : 0px,
+  media : 'all and (max-width: 721px)'
+);
+
 
 
 
@@ -57,6 +70,14 @@ $setting : (
         @include grid-column(1 , $setting);
         @extend .blue ;
         height: 100vh;
+        // 平板
+        @include grid-media($setting_medium){
+            @include grid-column(3);
+        }
+        //手機
+        @include grid-media($setting_small){
+            @include grid-column(12);
+        }        
          
     }
 }

@@ -63,4 +63,20 @@ section {
   margin-left: 10px;
   height: 100vh;
 }
+
+@media all and (max-width: 996px) {
+  .wrapper_all_12 .col_1 {
+    width: calc(25%);
+    float: left;
+    margin-left: 0px;
+  }
+}
+
+@media all and (max-width: 721px) {
+  .wrapper_all_12 .col_1 {
+    width: calc(100%);
+    float: left;
+    margin-left: 0px;
+  }
+}
 /*# sourceMappingURL=neat.css.map */
