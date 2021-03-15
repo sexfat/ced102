@@ -12,27 +12,6 @@ const uglify = require('gulp-uglify');
 const rename = require('gulp-rename');
 
 
-
-
-
-// ==== 6. css 壓縮
-
-// const cleanCSS = require('gulp-clean-css'); // 1. 
-
-// function mini_css() {
-//     return src('css/style.css')
-//     .pipe(cleanCSS({compatibility: 'ie10'})) // 
-//     .pipe(rename({
-//         extname : '.min.css' //修改副檔名
-//         //basename : 'scripts' // 改檔名
-//     }))
-//     .pipe(dest('output/css'))
-// }
-
-// exports.css = mini_css; // 
-
-
-
  // js
  function uglify_js() {
     return src('dev/js/*.js')
@@ -63,8 +42,6 @@ function styleSass() {
      .pipe(dest('./css'))
 }
 
-// exports.style = styleSass;
-
 // html template
 
 const fileinclude = require('gulp-file-include');
@@ -78,7 +55,7 @@ function htmlTemplate() {
     .pipe(dest('./'))
 }
 
-// exports.html = htmlTemplate;
+
 
 
 
