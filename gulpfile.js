@@ -71,6 +71,7 @@ const uglify = require('gulp-uglify');
 const rename = require('gulp-rename');
 
 
+
 function uglify_js() {
     return src('js/main.js')
     .pipe(uglify()) // 去執行uglify函式
@@ -82,6 +83,21 @@ function uglify_js() {
 }
 
 exports.js = uglify_js;
+
+// ==== 6. css 壓縮
+
+const cleanCSS = require('gulp-clean-css'); // 1. 
+
+function mini_css() {
+    return src('css/style.css')
+    .pipe(cleanCSS({compatibility: 'ie10'})) // 
+    .pipe(dest('output/css/mini'))
+}
+
+exports.css = mini_css; // 
+
+
+
 
 
 
