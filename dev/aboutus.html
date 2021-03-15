@@ -9,13 +9,16 @@
 </head>
 <body>
     <div class="wrapper">
-      <!-- 樣板 header   -->
-      @@include('./layout/header.html')
-      <div class="content">
-          <h1>內文</h1>
+        <!-- 樣板 header   -->
+        @@include('./layout/header.html', {
+            "title" : "內頁標題" ,
+            "hover03" : "active"
+        })
+        <div class="content">
+            <h1>內文</h1>
+        </div>
+        <!-- 樣板 footer -->
+        @@include('./layout/footer.html')
       </div>
-      <!-- 樣板 footer -->
-      @@include('./layout/footer.html')
-    </div>
 </body>
 </html>
