@@ -37,7 +37,7 @@ exports.doA =  series(funcA , funcB); // 任務串連
 exports.doB =  parallel(funcA , funcB); // 任務並行
 
 
-// ====== 3. 打包 src / dest
+// ========== 3. 打包 src / dest
 
 // js
 function movefile() {
@@ -51,7 +51,7 @@ function movefile_css(){
 // exports.cp = movefile; // 輸出任務
 
 
-// ======= 4. watch  監看 
+// ========== 4. watch  監看 
 
 function watchTask(){
    watch('js/main.js' , movefile);  // 當main.js 有變動 -> 執行movefile任務 
