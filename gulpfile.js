@@ -7,6 +7,8 @@ const {
 } = require('gulp');
 
 
+
+
 //======  1 . console.log
 function defaultTask(cb) {
     //任務
@@ -59,4 +61,28 @@ function watchTask(){
 }
 
 exports.dowatch = watchTask; //輸出任務
+
+
+
+ 
+//====== 5.壓縮 js
+//  套件引入
+const uglify = require('gulp-uglify');
+const rename = require('gulp-rename');
+
+
+function uglify_js() {
+    return src('js/main.js')
+    .pipe(uglify()) // 去執行uglify函式
+    .pipe(rename({
+        //extname : '.min.js' //修改副檔名
+        basename : 'scripts' // 改檔名
+    }))
+    .pipe(dest('output/mini'));
+}
+
+exports.js = uglify_js;
+
+
+
 
