@@ -82,7 +82,7 @@ function uglify_js() {
     .pipe(dest('output/mini'));
 }
 
-exports.js = uglify_js;
+// exports.js = uglify_js;
 
 // ==== 6. css 壓縮
 
@@ -98,7 +98,17 @@ function mini_css() {
     .pipe(dest('output/css'))
 }
 
-exports.css = mini_css; // 
+// exports.css = mini_css; // 
+
+function watchall(){
+   watch(['css/style.css ','js/main.js'] , parallel(mini_css ,uglify_js)) // css js 同時監看
+}
+
+exports.doall = watchall;
+
+
+
+
 
 
 
