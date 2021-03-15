@@ -60,10 +60,11 @@ function htmlTemplate() {
 
 
 
- exports.default = function watchall(){
+ exports.default = function watchall(cb){
    watch('dev/sass/*.scss' , styleSass)
    watch('dev/js/*.js' , uglify_js)
    watch('dev/*.html' , htmlTemplate)
+   cb();
 }
 
 
