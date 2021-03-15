@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/sexfat/ced102/issues"
   },
-  "homepage": "https://github.com/sexfat/ced102#readme"
+  "homepage": "https://github.com/sexfat/ced102#readme",
+  "devDependencies": {
+    "gulp": "^4.0.2"
+  }
 }
