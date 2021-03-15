@@ -101,10 +101,27 @@ function mini_css() {
 // exports.css = mini_css; // 
 
 function watchall(){
-   watch(['css/style.css ','js/main.js'] , parallel(mini_css ,uglify_js)) // css js 同時監看
+   watch(['css/style.css','js/main.js'] , parallel(mini_css ,uglify_js)) // css js 同時監看
+}
+// 
+exports.doall = watchall;
+
+
+
+//合併
+const concat = require('gulp-concat');
+
+function cssconcat() {
+    return src(['css/*.css' , '!css/style.css'])
+    .pipe(concat('all.css'))
+    .pipe(dest('output/css'))
 }
 
-exports.doall = watchall;
+exports.concat = cssconcat;
+
+
+
+
 
 
 
