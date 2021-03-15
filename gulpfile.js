@@ -91,7 +91,11 @@ const cleanCSS = require('gulp-clean-css'); // 1.
 function mini_css() {
     return src('css/style.css')
     .pipe(cleanCSS({compatibility: 'ie10'})) // 
-    .pipe(dest('output/css/mini'))
+    .pipe(rename({
+        extname : '.min.css' //修改副檔名
+        //basename : 'scripts' // 改檔名
+    }))
+    .pipe(dest('output/css'))
 }
 
 exports.css = mini_css; // 
