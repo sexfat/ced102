@@ -18,5 +18,8 @@
   "homepage": "https://github.com/sexfat/ced102#readme",
   "devDependencies": {
     "gulp": "^4.0.2"
+  },
+  "dependencies": {
+    "jquery": "^3.6.0"
   }
 }
