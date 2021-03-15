@@ -144,7 +144,10 @@ const fileinclude = require('gulp-file-include');
 
 function htmlTemplate() {
     return src('dev/*.html')
-    .pipe()
+    .pipe(fileinclude({
+        prefix: '@@',
+        basepath: '@file'
+      }))
     .pipe(dest('./'))
 }
 
