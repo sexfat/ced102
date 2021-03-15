@@ -124,12 +124,15 @@ exports.concat = cssconcat;
 // sass 編譯
 
 const sass = require('gulp-sass');
+const sourcemaps = require('gulp-sourcemaps');
 
 function styleSass() {
      return src('sass/*.scss')
+     .pipe(sourcemaps.init())
      .pipe(sass({
-         outputStyle : 'expanded' // nested | expanded | compressed
+         outputStyle : 'expanded' // nested 巢狀 | expanded  | compressed 壓縮
      }).on('error', sass.logError))
+     .pipe(sourcemaps.write())
      .pipe(dest('output/css'))
 }
 
