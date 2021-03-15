@@ -121,6 +121,28 @@ function cssconcat() {
 exports.concat = cssconcat;
 
 
+// sass 編譯
+
+const sass = require('gulp-sass');
+
+function styleSass() {
+     return src('sass/*.scss')
+     .pipe(sass({
+         outputStyle : 'expanded' // nested | expanded | compressed
+     }).on('error', sass.logError))
+     .pipe(dest('output/css'))
+}
+
+exports.style = styleSass;
+
+
+
+
+
+
+
+
+
 
 
 
