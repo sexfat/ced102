@@ -121,7 +121,7 @@ function cssconcat() {
 exports.concat = cssconcat;
 
 
-// sass 編譯
+// sass 編譯 與 sourcemap 使用
 
 const sass = require('gulp-sass');
 const sourcemaps = require('gulp-sourcemaps');
@@ -137,6 +137,31 @@ function styleSass() {
 }
 
 exports.style = styleSass;
+
+// html template
+
+const fileinclude = require('gulp-file-include');
+
+function htmlTemplate() {
+    return src('dev/*.html')
+    .pipe()
+    .pipe(dest('./'))
+}
+
+exports.html = htmlTemplate;
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
