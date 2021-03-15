@@ -1,8 +1,1 @@
-.box1 {
-   display: block;
-   content: 'aa'; 
-}
-.box2 {
-    display: block;
-    content: 'bb'; 
- }
+.box1{display:block;content:'aa'}.box2{display:block;content:'bb'}

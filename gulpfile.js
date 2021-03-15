@@ -108,12 +108,13 @@ exports.doall = watchall;
 
 
 
-//合併
+//合併程式碼
 const concat = require('gulp-concat');
 
 function cssconcat() {
     return src(['css/*.css' , '!css/style.css'])
-    .pipe(concat('all.css'))
+    .pipe(concat('all.css')) //合併
+    .pipe(cleanCSS({compatibility: 'ie10'})) // 壓縮
     .pipe(dest('output/css'))
 }
 
