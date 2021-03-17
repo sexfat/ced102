@@ -169,6 +169,33 @@ function clearfile() {
 exports.pcss = series(clearfile, styleSass)  //先刪除舊檔案，再進行打包 
 
 
+// 壓縮圖片 https://www.npmjs.com/package/gulp-imagemin
+ 
+const imagemin = require('gulp-imagemin');
+
+function imgs(){
+   return src('images/*.*')
+   .pipe(imagemin())
+//    .pipe(rename({
+//     //extname : '.min.css' //修改副檔名
+//     path.basename  +=  '-min' // 改檔名
+//     }))
+   .pipe(dest('images/mini/'))
+}
+
+exports.minimg = imgs 
+
+function clearfile_img() {
+    return src('images/mini', { read: false , allowEmpty : true  })  // allowEmpty : true 允許空的資料結構
+    .pipe(clean({force: true}));  // {force: true} 強制刪除
+}
+
+exports.clearImg = series(clearfile_img , imgs)
+
+
+
+
+
 
 
 
