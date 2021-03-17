@@ -133,10 +133,10 @@ function styleSass() {
          outputStyle : 'expanded' // nested 巢狀 | expanded  | compressed 壓縮
      }).on('error', sass.logError))
      .pipe(sourcemaps.write())
-     .pipe(dest('output/css'))
+     .pipe(dest('css'))
 }
 
-exports.style = styleSass;
+// exports.style = styleSass;
 
 // html template
 
@@ -160,11 +160,15 @@ const clean = require('gulp-clean');
 
 
 function clearfile() {
-    return src('output', { read: false })
-    .pipe(clean());
+    return src('output', { read: false , allowEmpty : true  })  // allowEmpty : true 允許空的資料結構
+    .pipe(clean({force: true}));  // {force: true} 強制刪除
 }
 
-exports.clear = clearfile;
+// exports.clear = clearfile;
+
+exports.pcss = series(clearfile, styleSass)
+
+
 
 
 
