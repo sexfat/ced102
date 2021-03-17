@@ -249,6 +249,7 @@ function babel5() {
         .pipe(babels({
             presets: ['@babel/env']
         }))
+        .pipe(uglify()) 
         .pipe(dest('js'));
 }
 
