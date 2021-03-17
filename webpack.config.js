@@ -6,6 +6,7 @@ module.exports = {
         path: path.resolve(__dirname, 'dist'),
         filename: 'bundle.js'
       },              // 出口文件
+    resolve: { alias: { vue: 'vue/dist/vue.esm.js' } }, // 路徑問題
    // module: {},              // 處裡對應模組
    // plugins: [],             // 對應的插件
    // devServer: {},           // 服務器配置

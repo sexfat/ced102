@@ -2,11 +2,11 @@
 // import $ from 'jquery';
 import Vue from 'vue';
 
-const callthings =(some) =>{
-   return some + 'do something' 
-}
+// const callthings =(some) =>{
+//    return some + 'do something' 
+// }
 
-console.log(callthings('bb'));
+// console.log(callthings('bb'));
 
 
  new Vue({
@@ -14,7 +14,7 @@ console.log(callthings('bb'));
     data : {
      message : 'hellow Vue'  
     }
- });
+ })
 
 
 // $('body').css('background-color' , '#eee');
