@@ -154,6 +154,23 @@ function htmlTemplate() {
 exports.html = htmlTemplate;
 
 
+//套件清除舊檔案
+
+const clean = require('gulp-clean');
+
+
+function clearfile() {
+    return src('output', { read: false })
+    .pipe(clean());
+}
+
+exports.clear = clearfile;
+
+
+
+
+
+
 
 
 
