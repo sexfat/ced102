@@ -208,18 +208,19 @@ function autoprefix() {
         }))
         .pipe(rename({
             //prefix: "bonjour-", // 檔名前
-             suffix: "-prefix" // 檔名後
+            suffix: "-prefix" // 檔名後
             // extname : '.min.css' //修改副檔名
             //basename : 'scripts' // 改檔名
         }))
         .pipe(dest('css'))
-} 
+}
 
 exports.prefix = autoprefix
 
 // 瀏覽器同步
 
-const browsersync = require('browser-sync')
+const browsersync = require('browser-sync');
+const babel = require('gulp-babel');
 const reload = browsersync.reload;
 
 
@@ -232,12 +233,28 @@ function browserSync() {
         port: 3000
     });
     // 監看檔案 -> reload broswer
-    watch(['dev/sass/*.scss', 'dev/sass/**/*.scss'], series(clearfile, styleSass , autoprefix)).on('change', reload)
+    watch(['dev/sass/*.scss', 'dev/sass/**/*.scss'], series(clearfile, styleSass, autoprefix)).on('change', reload)
     watch(['dev/*.html', 'dev/**/*.html'], htmlTemplate).on('change', reload)
 }
 
 
 exports.browser = browserSync
+
+
+// babel
+const babels = require('gulp-babel');
+
+function babel5() {
+    return src('dev/js/*.js')
+        .pipe(babels({
+            presets: ['@babel/env']
+        }))
+        .pipe(dest('js'));
+}
+
+exports.jsbabel = babel5
+
+
 
 
 
