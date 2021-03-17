@@ -8,7 +8,8 @@
     "1.安裝套件": "npm install",
     "2.開發": "gulp browser",
     "3.壓縮圖片": "gulp clearImg",
-    "4. es6": "gulp jsbabel"
+    "4. es6": "gulp jsbabel",
+    "webpack-dev" : "webpack"
   },
   "repository": {
     "type": "git",
