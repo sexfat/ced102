@@ -176,8 +176,8 @@ const imagemin = require('gulp-imagemin');
 function imgs(){
    return src('images/*.*')
    .pipe(rename({
-    // prefix: "bonjour-",
-    suffix: "-min"
+    prefix: "bonjour-", // 檔名前
+    // suffix: "-min" // 檔名後
     // extname : '.min.css' //修改副檔名
     //basename : 'scripts' // 改檔名
 }))
