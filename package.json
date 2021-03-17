@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev" : "gulp browser"
+    "1.安裝套件": "npm install",
+    "2.開發": "gulp browser",
+    "3.壓縮圖片": "gulp clearImg"
   },
   "repository": {
     "type": "git",
