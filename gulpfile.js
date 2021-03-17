@@ -217,6 +217,8 @@ function autoprefix() {
 
 exports.prefix = autoprefix
 
+// 瀏覽器同步
+
 const browsersync = require('browser-sync')
 const reload = browsersync.reload;
 
@@ -235,12 +237,6 @@ function browserSync() {
 }
 
 
-
-
-
-
-
-exports.prefix = autoprefix 
 exports.browser = browserSync
 
 

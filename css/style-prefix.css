@@ -39,8 +39,8 @@ footer {
 }
 
 body {
-  color: greenyellow;
-  background-color: rgba(196, 47, 204, 0.66);
+  color: #fefefe;
+  background-color: #f9003a;
   -webkit-animation: cubic-bezier(0.075, 0.82, 0.165, 1);
   animation: cubic-bezier(0.075, 0.82, 0.165, 1);
 }
