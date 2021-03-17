@@ -1,1 +1,0 @@
-"use strict";var callthings=function(n){return n+"do something"};console.log(callthings("aa"));
