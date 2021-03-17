@@ -1,0 +1,46 @@
+body {
+  font-size: 20px;
+}
+
+body .wrapper {
+  width: 100%;
+  min-width: 1200px;
+}
+
+body .wrapper h1 {
+  font-size: 30px;
+}
+
+header {
+  width: 100%;
+}
+
+header nav ul {
+  list-style: none;
+}
+
+header nav ul li {
+  width: 120px;
+  display: flex;
+}
+
+span {
+  margin: 10px;
+}
+
+footer {
+  width: 100%;
+}
+
+.login {
+  position: relative;
+  top: 10px;
+  left: 300px;
+}
+
+body {
+  color: greenyellow;
+  background-color: rgba(196, 47, 204, 0.66);
+  -webkit-animation: cubic-bezier(0.075, 0.82, 0.165, 1);
+  animation: cubic-bezier(0.075, 0.82, 0.165, 1);
+}
