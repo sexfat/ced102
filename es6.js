@@ -2,17 +2,17 @@
 // import $ from 'jquery';
 import Vue from 'vue';
 
-// const callthings =(some) =>{
-//    return some + 'do something' 
-// }
+const callthings =(some) =>{
+   return some + 'do something' 
+}
 
-// console.log(callthings('bb'));
+console.log(callthings('bb'));
 
 
  new Vue({
     el : '#app',
     data : {
-     message : 'hellow Vue'  
+     message : 'hi Vue is ok'  
     }
  })
 
