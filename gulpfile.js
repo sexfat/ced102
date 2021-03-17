@@ -196,6 +196,27 @@ exports.clearImg = series(clearfile_img , imgs) // 先執行刪除舊圖片  -> 
 
 
 
+const browsersync = require('browser-sync').create();
+
+
+function browserSync(done) {
+    browsersync.init({
+        server: {
+            baseDir: "./",  //根目錄
+            index: "index.html"  // 打開頁面
+        },
+        port: 3000
+    });
+    done();
+}
+
+exports.browser = browserSync
+
+
+
+
+
+
 
 
 
