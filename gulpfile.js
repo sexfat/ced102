@@ -160,13 +160,13 @@ const clean = require('gulp-clean');
 
 
 function clearfile() {
-    return src('output', { read: false , allowEmpty : true  })  // allowEmpty : true 允許空的資料結構
+    return src('css', { read: false , allowEmpty : true  })  // allowEmpty : true 允許空的資料結構
     .pipe(clean({force: true}));  // {force: true} 強制刪除
 }
 
 // exports.clear = clearfile;
 
-exports.pcss = series(clearfile, styleSass)
+exports.pcss = series(clearfile, styleSass)  //先刪除舊檔案，再進行打包 
 
 
 
