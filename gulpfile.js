@@ -176,10 +176,6 @@ const imagemin = require('gulp-imagemin');
 function imgs(){
    return src('images/*.*')
    .pipe(imagemin())
-//    .pipe(rename({
-//     //extname : '.min.css' //修改副檔名
-//     path.basename  +=  '-min' // 改檔名
-//     }))
    .pipe(dest('images/mini/'))
 }
 
@@ -190,7 +186,7 @@ function clearfile_img() {
     .pipe(clean({force: true}));  // {force: true} 強制刪除
 }
 
-exports.clearImg = series(clearfile_img , imgs)
+exports.clearImg = series(clearfile_img , imgs) // 先執行刪除舊圖片  -> 壓縮圖片
 
 
 
