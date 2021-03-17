@@ -127,7 +127,7 @@ const sass = require('gulp-sass');
 const sourcemaps = require('gulp-sourcemaps');
 
 function styleSass() {
-     return src('sass/*.scss')
+     return src('dev/sass/*.scss')
      .pipe(sourcemaps.init())
      .pipe(sass({
          outputStyle : 'expanded' // nested 巢狀 | expanded  | compressed 壓縮
@@ -196,11 +196,11 @@ exports.clearImg = series(clearfile_img , imgs) // 先執行刪除舊圖片  -> 
 
 
 
-const browsersync = require('browser-sync').create();
-const reload  =  browserSync.reload;
+const browsersync = require('browser-sync')
+const reload  =  browsersync.reload;
 
 
-function browserSync(done) {
+function browserSync() {
     browsersync.init({
         server: {
             baseDir: "./",  //根目錄
@@ -208,10 +208,8 @@ function browserSync(done) {
         },
         port: 3000
     });
-    
-    watch('dev/sass/*.scss' , styleSass).on('change' , roload);
-    watch('dev/*.html' , htmlTemplate).on('change' , roload);
-    done();
+    watch('dev/sass/*.scss' , styleSass).on('change' , reload)
+    watch('dev/*.html' , htmlTemplate).on('change' , reload)
 }
 
 exports.browser = browserSync
