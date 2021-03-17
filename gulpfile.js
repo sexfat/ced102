@@ -197,6 +197,7 @@ exports.clearImg = series(clearfile_img , imgs) // 先執行刪除舊圖片  -> 
 
 
 const browsersync = require('browser-sync').create();
+const reload  =  browserSync.reload;
 
 
 function browserSync(done) {
@@ -207,6 +208,9 @@ function browserSync(done) {
         },
         port: 3000
     });
+    
+    watch('dev/sass/*.scss' , styleSass).on('change' , roload);
+    watch('dev/*.html' , htmlTemplate).on('change' , roload);
     done();
 }
 
