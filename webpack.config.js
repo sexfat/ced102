@@ -2,7 +2,11 @@ const path = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const {
     CleanWebpackPlugin
-} = require('clean-webpack-plugin');
+} = require('clean-webpack-plugin');  //清除舊檔案
+
+const HtmlWebpackPlugin = require('html-webpack-plugin');  // html 
+
+
 
 module.exports = {
     entry: './es6.js',               // 入口文件
@@ -10,7 +14,7 @@ module.exports = {
         path: path.resolve(__dirname, 'dist'),
         filename: 'js/bundle.js'  // js輸出
       },              // 出口文件
-    resolve: { alias: { vue: 'vue/dist/vue.esm.js' } }, // 路徑問題
+    resolve: { alias: { vue: 'vue/dist/vue.esm.js' }}, // 路徑問題
     module: {
         rules: [{
             // 格式
@@ -35,6 +39,13 @@ module.exports = {
         // css 輸出
         new MiniCssExtractPlugin({
             filename: "./css/style.css"  // css輸出
+        }),
+        new HtmlWebpackPlugin({
+            //chunks : ['index'],  //選擇注入資源 chunk
+            //inject  : 'body', //預設<body> js </body>  head or body
+            template : './src/index.html',
+            //目的地
+            filename : 'index.html'
         })
         
     ],             // 對應的插件            // 對應的插件
