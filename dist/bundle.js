@@ -130,6 +130,30 @@ eval("/* WEBPACK VAR INJECTION */(function(global) {var scope = (typeof global !
 
 /***/ }),
 
+/***/ "./css/index.css":
+/*!***********************!*\
+  !*** ./css/index.css ***!
+  \***********************/
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extract-plugin\n\n\n//# sourceURL=webpack:///./css/index.css?");
+
+/***/ }),
+
+/***/ "./css/main.css":
+/*!**********************!*\
+  !*** ./css/main.css ***!
+  \**********************/
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extract-plugin\n\n\n//# sourceURL=webpack:///./css/main.css?");
+
+/***/ }),
+
 /***/ "./css/style.css":
 /*!***********************!*\
   !*** ./css/style.css ***!
@@ -150,7 +174,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extr
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue */ \"./node_modules/vue/dist/vue.esm.js\");\n/* harmony import */ var _css_style_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./css/style.css */ \"./css/style.css\");\n// jquery\n// import $ from 'jquery';\n\n\n\nconst callthings =(some) =>{\n   return some + 'do something' \n}\n\nconsole.log(callthings('bb'));\n\n\n new vue__WEBPACK_IMPORTED_MODULE_0__[\"default\"]({\n    el : '#app',\n    data : {\n     message : 'hi Vue is ok'  \n    }\n })\n\n\n// $('body').css('background-color' , '#eee');\n\n//# sourceURL=webpack:///./es6.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue */ \"./node_modules/vue/dist/vue.esm.js\");\n/* harmony import */ var _css_style_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./css/style.css */ \"./css/style.css\");\n/* harmony import */ var _css_main_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./css/main.css */ \"./css/main.css\");\n/* harmony import */ var _css_index_css__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./css/index.css */ \"./css/index.css\");\n// jquery\n// import $ from 'jquery';\n\n\n\n\n\nconst callthings =(some) =>{\n   return some + 'do something' \n}\n\nconsole.log(callthings('bb'));\n\n\n new vue__WEBPACK_IMPORTED_MODULE_0__[\"default\"]({\n    el : '#app',\n    data : {\n     message : 'hi Vue is ok'  \n    }\n })\n\n\n// $('body').css('background-color' , '#eee');\n\n//# sourceURL=webpack:///./es6.js?");
 
 /***/ }),
 

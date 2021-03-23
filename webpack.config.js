@@ -23,7 +23,6 @@ module.exports = {
                 'css-loader'
             ],
         }]
-
     },          // 處裡對應模組
     plugins: [
         new MiniCssExtractPlugin({

@@ -1,3 +1,9 @@
 body {
     background-color: #d1da2a;
 }
+p {
+    font-size: 10px;
+}
+span {
+   margin: 0; 
+}
