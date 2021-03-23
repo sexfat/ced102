@@ -6,6 +6,10 @@ import Vue from 'vue';
 // import './css/index.css';
 import './sass/style.scss';
 
+
+$('body').css('background-color' , 'blue');
+
+
 const callthings =(some) =>{
    return some + 'do something' 
 }
