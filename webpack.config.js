@@ -43,9 +43,11 @@ module.exports = {
         new MiniCssExtractPlugin({
             filename: "./css/style.css"  // css輸出
         }),
+
+        //html 輸出
         new HtmlWebpackPlugin({
             chunks : ['index'],  //選擇注入資源 chunk
-            //inject  : 'body', //預設<body> js </body>  head or body
+            inject  : 'body', //預設<body> js </body>  head or body
             template : './index.html',
             //目的地
             filename : 'index.html'

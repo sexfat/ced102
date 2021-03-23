@@ -138,7 +138,7 @@ eval("/* WEBPACK VAR INJECTION */(function(global) {var scope = (typeof global !
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue */ \"./node_modules/vue/dist/vue.esm.js\");\n/* harmony import */ var _sass_style_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./sass/style.scss */ \"./sass/style.scss\");\n// jquery\n// import $ from 'jquery';\n\n// import './css/style.css';\n// import './css/main.css';\n// import './css/index.css';\n\n\nconst callthings =(some) =>{\n   return some + 'do something' \n}\n\nconsole.log(callthings('bb'));\n\n\n new vue__WEBPACK_IMPORTED_MODULE_0__[\"default\"]({\n    el : '#app',\n    data : {\n     message : 'hi Vue is ok'  \n    }\n })\n\n\n// $('body').css('background-color' , '#eee');\n\n//# sourceURL=webpack:///./es6.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue */ \"./node_modules/vue/dist/vue.esm.js\");\n/* harmony import */ var _sass_style_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./sass/style.scss */ \"./sass/style.scss\");\n// jquery\n// import $ from 'jquery';\n\n// import './css/style.css';\n// import './css/main.css';\n// import './css/index.css';\n\n\nconst callthings =(some) =>{\n   return some + 'do something' \n}\n\nconsole.log(callthings('bb'));\n\n\n new vue__WEBPACK_IMPORTED_MODULE_0__[\"default\"]({\n    el : '#app',\n    data : {\n     message : 'hi Vue running'  \n    }\n })\n\n\n// $('body').css('background-color' , '#eee');\n\n//# sourceURL=webpack:///./es6.js?");
 
 /***/ }),
 

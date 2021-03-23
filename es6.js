@@ -16,7 +16,7 @@ console.log(callthings('bb'));
  new Vue({
     el : '#app',
     data : {
-     message : 'hi Vue is ok'  
+     message : 'hi Vue running'  
     }
  })
 
