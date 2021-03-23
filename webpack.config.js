@@ -11,12 +11,12 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');  // html
 
 module.exports = {
     entry: {
-       index:'./src/es6.js'
-    //    about : './about.js'
+       index:'./src/es6.js',
+       about : './src/about.js'
        },               // 入口文件
     output: {
         path: path.resolve(__dirname, 'dist'),
-        filename: 'js/bundle.js'  // js輸出
+        filename: 'js/[name].js'  // js輸出
       },              // 出口文件
     resolve: { alias: { vue: 'vue/dist/vue.esm.js' }}, // 路徑問題
     module: {
@@ -58,7 +58,7 @@ module.exports = {
         
         // css 輸出
         new MiniCssExtractPlugin({
-            filename: "./css/style.css"  // css輸出
+            filename: "./css/[name].css"  // css輸出
         }),
 
         //html 輸出
@@ -70,6 +70,16 @@ module.exports = {
             minify : false, // 壓縮html
             title : '首頁新'  // 放入 title 
         }),
+        new HtmlWebpackPlugin({
+            chunks : ['about'],  //選擇注入資源 chunk
+            inject  : 'body', //預設<body> js </body>  head or body
+            template : './src/about.html', //來源
+            filename : 'about.html', //目的地
+            minify : false, // 壓縮html
+            title : '關於我們頁面'  // 放入 title 
+        }),
+
+        //全域加載jq
         new webpack.ProvidePlugin({
             $: 'jquery',
             jQuery: 'jquery'

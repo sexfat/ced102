@@ -7,7 +7,7 @@ import Vue from 'vue';
 import './sass/style.scss';
 
 
-$('body').css('background-color' , 'blue');
+$('body').css('background-color' , 'green');
 
 
 const callthings =(some) =>{
