@@ -48,9 +48,10 @@ module.exports = {
         new HtmlWebpackPlugin({
             chunks : ['index'],  //選擇注入資源 chunk
             inject  : 'body', //預設<body> js </body>  head or body
-            template : './index.html',
-            //目的地
-            filename : 'index.html'
+            template : './index.html', //來源
+            filename : 'index.html', //目的地
+            minify : false,
+            title : '首頁新' 
         })
         
     ],             // 對應的插件            // 對應的插件
