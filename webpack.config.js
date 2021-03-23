@@ -50,11 +50,18 @@ module.exports = {
             inject  : 'body', //預設<body> js </body>  head or body
             template : './index.html', //來源
             filename : 'index.html', //目的地
-            minify : false,
-            title : '首頁新' 
+            minify : false, // 壓縮html
+            title : '首頁新'  // 放入 title 
         })
         
     ],             // 對應的插件            // 對應的插件
-   // devServer: {},           // 服務器配置
+    devServer: {
+        contentBase: './dist',
+        host: 'localhost',
+        port: 3000,
+        // 指定首頁檔案
+        index: 'index.html',
+        open: true
+    },         // 服務器配置
     mode: 'development'      // 開發模式配置 development   // 上線 production
 }
