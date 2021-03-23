@@ -9,7 +9,10 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');  // html
 
 
 module.exports = {
-    entry: './es6.js',               // 入口文件
+    entry: {
+       index:'./es6.js'
+    //    about : './about.js'
+       },               // 入口文件
     output: {
         path: path.resolve(__dirname, 'dist'),
         filename: 'js/bundle.js'  // js輸出
@@ -41,9 +44,9 @@ module.exports = {
             filename: "./css/style.css"  // css輸出
         }),
         new HtmlWebpackPlugin({
-            //chunks : ['index'],  //選擇注入資源 chunk
+            chunks : ['index'],  //選擇注入資源 chunk
             //inject  : 'body', //預設<body> js </body>  head or body
-            template : './src/index.html',
+            template : './index.html',
             //目的地
             filename : 'index.html'
         })
