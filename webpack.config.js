@@ -5,7 +5,7 @@ module.exports = {
     entry: './es6.js',               // 入口文件
     output: {
         path: path.resolve(__dirname, 'dist'),
-        filename: 'js/bundle.js'
+        filename: 'js/bundle.js'  // js輸出
       },              // 出口文件
     resolve: { alias: { vue: 'vue/dist/vue.esm.js' } }, // 路徑問題
     module: {
@@ -27,7 +27,7 @@ module.exports = {
     },          // 處裡對應模組
     plugins: [
         new MiniCssExtractPlugin({
-            filename: "./css/style.css"
+            filename: "./css/style.css"  // css輸出
         })
     ],             // 對應的插件            // 對應的插件
    // devServer: {},           // 服務器配置
