@@ -9,7 +9,7 @@
     "2.開發": "gulp browser",
     "3.壓縮圖片": "gulp clearImg",
     "4. es6": "gulp jsbabel",
-    "webpack-dev" : "webpack"
+    "webpack-dev": "webpack"
   },
   "repository": {
     "type": "git",
@@ -38,6 +38,7 @@
     "gulp-sass": "^4.1.0",
     "gulp-sourcemaps": "^3.0.0",
     "gulp-uglify": "^3.0.2",
+    "mini-css-extract-plugin": "^1.3.9",
     "node-sass": "^5.0.0",
     "style-loader": "^2.0.0",
     "webpack": "^4.43.0"
