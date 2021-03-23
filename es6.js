@@ -1,9 +1,10 @@
 // jquery
 // import $ from 'jquery';
 import Vue from 'vue';
-import './css/style.css';
-import './css/main.css';
-import './css/index.css';
+// import './css/style.css';
+// import './css/main.css';
+// import './css/index.css';
+import './sass/style.scss';
 
 const callthings =(some) =>{
    return some + 'do something' 

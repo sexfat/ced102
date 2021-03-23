@@ -1,9 +1,9 @@
 body {
-    background-color: #d1da2a;
-}
-p {
-    font-size: 10px;
-}
-span {
-   margin: 0; 
-}
+  font-size: 20px; }
+  body .wrapper {
+    margin: 0 auto;
+    padding: 0;
+    width: 1200px; }
+    body .wrapper h1 {
+      font-size: 2rem; }
+
