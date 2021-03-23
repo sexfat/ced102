@@ -54,7 +54,7 @@ module.exports = {
             title : '首頁新'  // 放入 title 
         })
         
-    ],             // 對應的插件            // 對應的插件
+    ],// 對應的插件
     devServer: {
         contentBase: './dist',
         host: 'localhost',
@@ -62,6 +62,6 @@ module.exports = {
         // 指定首頁檔案
         index: 'index.html',
         open: true
-    },         // 服務器配置
+    },// 服務器配置
     mode: 'development'      // 開發模式配置 development   // 上線 production
 }
