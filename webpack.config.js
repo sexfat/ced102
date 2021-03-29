@@ -6,6 +6,7 @@ const {
 } = require('clean-webpack-plugin');  //清除舊檔案
 
 const HtmlWebpackPlugin = require('html-webpack-plugin');  // html 
+const HtmlWebpackPartialsPlugin = require('html-webpack-partials-plugin');
 
 
 
@@ -83,7 +84,12 @@ module.exports = {
         new webpack.ProvidePlugin({
             $: 'jquery',
             jQuery: 'jquery'
-          })
+          }),
+         new HtmlWebpackPartialsPlugin({
+             path : './src/layout/nav.html',
+             location : 'navpanel',
+             template : ['index.html' , 'about.html']
+         })  
         
     ],// 對應的插件
     devServer: {

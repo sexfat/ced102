@@ -1,0 +1,10 @@
+body {
+  font-size: 20px;
+  background-color: #c1c1c1; }
+  body .wrapper {
+    margin: 0 auto;
+    padding: 0;
+    width: 1200px; }
+    body .wrapper h1 {
+      font-size: 2rem; }
+
