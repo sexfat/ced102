@@ -79,18 +79,27 @@ module.exports = {
             minify : false, // 壓縮html
             title : '關於我們頁面'  // 放入 title 
         }),
+        new HtmlWebpackPlugin({
+            chunks : ['about'],  //選擇注入資源 chunk
+            inject  : 'body', //預設<body> js </body>  head or body
+            template : './src/contact.html', //來源
+            filename : 'contact.html', //目的地
+            minify : false, // 壓縮html
+            title : '關於我們頁面'  // 放入 title 
+        }),
 
         //全域加載jq
         new webpack.ProvidePlugin({
             $: 'jquery',
             jQuery: 'jquery'
           }),
+
+        //樣板功能
          new HtmlWebpackPartialsPlugin({
-             path : './src/layout/nav.html',
-             location : 'navpanel',
-             template : ['index.html' , 'about.html']
+             path : path.join(__dirname, './src/layout/nav.html'),
+             location : 'nav',
+             template_filename : ['index.html' , 'about.html' ,'contact.html']
          })  
-        
     ],// 對應的插件
     devServer: {
         contentBase: './dist',
