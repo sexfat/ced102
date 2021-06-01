@@ -6,6 +6,14 @@ const {
     watch
 } = require('gulp');
 
+const indexpath = require('./path.js')
+
+
+
+
+
+
+
 
 
 
@@ -228,7 +236,7 @@ function browserSync() {
     browsersync.init({
         server: {
             baseDir: "./",  //根目錄
-            index: "index.html"  // 打開頁面
+            index: indexpath  // 打開頁面
         },
         port: 3000
     });
